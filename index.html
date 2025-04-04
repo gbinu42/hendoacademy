@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>മലങ്കര ܒܝܬ ܐܦܪܝܡ നസ്രാണി യോഗം - ഹെന്ദോ അക്കാദമി | Hendo Academy</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Karshon';
+            src: url('fonts/Karshon.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --primary-color: #8a3c3c; /* Reddish brown from logo */
+            --secondary-color: #d4a445; /* Gold from logo */
+            --tertiary-color: #3c5c8a; /* Blue from logo */
+            --text-color: #333;
+            --light-bg: #f8f5f0;
+            --dark-bg: #2b2620;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .syriac {
+            font-family: 'Karshon', serif;
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navbar Styles */
+        nav {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-small {
+            height: 50px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            background-image: linear-gradient(to bottom, rgba(138, 60, 60, 0.8), rgba(43, 38, 32, 0.9));
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            width: 200px;
+            overflow: hidden;
+        }
+        
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-text {
+            max-width: 60%;
+        }
+        
+        .header-text h1 {
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .main-title {
+            font-size: 2.2rem;
+            color: white;
+        }
+        
+        .subtitle {
+            font-size: 1.7rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .syriac-title {
+            font-size: 2.9rem;
+            color: #f0dba5; /* Slightly different gold shade for visual distinction */
+            font-weight: normal;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .about, .activities, .videos, .contact {
+            padding: 4rem 0;
+        }
+        
+        .about {
+            background-color: var(--light-bg);
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .activity-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--tertiary-color);
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .activity-card h3 {
+            color: var(--primary-color);
+        }
+        
+        .activity-card h3 .syriac {
+            font-size: 1.1em;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .video-card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-card img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .video-info {
+            padding: 1rem;
+        }
+        
+        .youtube-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .youtube-link:hover {
+            background-color: var(--tertiary-color);
+        }
+        
+        .contact {
+            background-color: var(--secondary-color);
+            background-image: linear-gradient(to bottom, var(--secondary-color), #c39235);
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Enhanced Footer Styles */
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-text {
+                max-width: 100%;
+                margin-top: 1.5rem;
+            }
+            
+            .main-title, .subtitle, .syriac-title {
+                font-size: 1.5rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: var(--dark-bg);
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                display: none;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Hendo Academy Logo" class="logo-small">
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="editor.html">Syriac Editor</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="Hendo Academy Logo">
+            </div>
+            <div class="header-text">
+                <h1 class="main-title">മലങ്കര <span class="syriac">ܒܝܬ ܐܦܪܝܡ</span> നസ്രാണി യോഗം - ഹെന്ദോ അക്കാദമി</h1>
+                <h1 class="syriac-title syriac">ܡܲܠܲܢܟܲࡧܲܐ ܒܹܝܬ݂ ܐܲܦܪܹܝܡ ܢܲܣܪܵࡤܝܼ ܝܘܿܓܲܡ - ܗܸࡥܕܘܿ ܐܲܟ̱ܵܕܲܡܝܼ</h1>
+                <h1 class="subtitle">Malankara <span class="syriac">ܒܝܬ ܐܦܪܝܡ</span> Nasrani Yogam - Hendo Academy</h1>
+                <p>Preserving and promoting the heritage of Saint Thomas Christians in India</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Hendo Academy is dedicated to preserving and promoting the rich cultural heritage of the Nasranies of India, also known as Saint Thomas Christians. We focus on the study of Syriac language, the historical foundations of the Syro Malabar Church, and the unique traditions of the Nasrani community.</p>
+            <p>Our mission is to advance scholarly research, education, and awareness about the ancient Christian community in Kerala and its connections to the broader Syriac Christian world.</p>
+        </div>
+    </section>
+    
+    <!-- Activities Section -->
+    <section class="activities" id="activities">
+        <div class="container">
+            <h2>Our Activities</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <h3>Weekly Syriac Classes <span class="syriac">ܣܘܪܝܝܐ</span></h3>
+                    <p>Learn the ancient liturgical language of the Syro Malabar Church through our structured curriculum, taught by experienced instructors.</p>
+                </div>
+                <div class="activity-card">
+                    <h3>Field Visits</h3>
+                    <p>Explore historical churches, ancient manuscript collections, and cultural sites relevant to Nasrani heritage through guided expeditions.</p>
+                </div>
+                <div class="activity-card">
+                    <h3>Paper Presentations</h3>
+                    <p>Participate in scholarly discussions and present research papers on various aspects of Nasrani history, culture, and traditions.</p>
+                </div>
+                <div class="activity-card">
+                    <h3>History Lecture Series</h3>
+                    <p>Attend our comprehensive lecture series covering the extensive history of the Syro Malabar Church and the Nasrani community in India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Videos Section -->
+    <section class="videos" id="videos">
+        <div class="container">
+            <h2>Educational Videos</h2>
+            <p>Explore our collection of educational videos on the Syro Malabar Church history, Syriac language, and Nasrani traditions.</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <img src="https://img.youtube.com/vi/placeholder1/maxresdefault.jpg" alt="Syriac Lessons">
+                    <div class="video-info">
+                        <h3>Introduction to Syriac Language <span class="syriac">ܠܫܢܐ ܣܘܪܝܝܐ</span></h3>
+                        <p>Learn the basics of Syriac script and pronunciation.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <img src="https://img.youtube.com/vi/placeholder2/maxresdefault.jpg" alt="Nasrani History">
+                    <div class="video-info">
+                        <h3>History of Nasranies in Kerala</h3>
+                        <p>Exploring the ancient roots of Christianity in Kerala.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <img src="https://img.youtube.com/vi/placeholder3/maxresdefault.jpg" alt="Liturgical Traditions">
+                    <div class="video-info">
+                        <h3>Syro Malabar Liturgical Traditions</h3>
+                        <p>Understanding the unique liturgical practices.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://www.youtube.com/@മലങ്കരനസ്രാണിയോഗം-ഹെന്ദോഅക്കാദ" class="youtube-link" target="_blank">Visit Our YouTube Channel</a>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>If you're interested in our programs or would like to learn more about the Nasrani heritage, please contact us:</p>
+                <p><strong>Email:</strong> info@hendoacademy.org</p>
+                <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+                <p><strong>Location:</strong> Kerala, India</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#activities">Our Activities</a></li>
+                        <li><a href="#videos">Educational Videos</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="editor.html">Syriac Editor</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Syriac Learning Materials <span class="syriac">ܣܘܪܝܝܐ</span></a></li>
+                        <li><a href="#">Nasrani Heritage</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Historical Archives</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <p>Follow us on social media for updates on our activities and events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hendo Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        $(document).ready(function() {
+            // Mobile menu toggle
+            $('.mobile-menu-btn').click(function() {
+                $('.nav-links').toggleClass('active');
+            });
+            
+            // Smooth scrolling for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                
+                var target = this.hash;
+                var $target = $(target);
+                
+                $('html, body').animate({
+                    'scrollTop': $target.offset().top - 70
+                }, 800, 'swing');
+                
+                // Close mobile menu after clicking a link
+                $('.nav-links').removeClass('active');
+            });
+        });
+    </script>
+</body>
+</html> 
