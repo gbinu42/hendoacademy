@@ -111,10 +111,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
         
         .logo-container {
-            width: 200px;
+            width: 300px;
             overflow: hidden;
         }
         
@@ -324,6 +325,159 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .video-embed {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-embed:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-embed iframe {
+            display: block;
+            aspect-ratio: 16/9;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .video-embed h3 {
+            padding: 1rem;
+            color: var(--primary-color);
+        }
+        
+        /* Editor Showcase Section */
+        .editor-showcase {
+            background-color: var(--light-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .editor-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50" y="50" font-size="20" text-anchor="middle" alignment-baseline="middle" font-family="Arial" fill="rgba(0,0,0,0.03)">ܣܘܪܝܝܐ</text></svg>');
+            background-repeat: repeat;
+            z-index: 0;
+        }
+        
+        .editor-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .editor-info {
+            padding: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-list li i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+        
+        .editor-cta {
+            margin-top: 2rem;
+        }
+        
+        .editor-link {
+            display: inline-block;
+            background-color: var(--tertiary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .editor-link:hover {
+            background-color: #2b4c78;
+        }
+        
+        .editor-preview {
+            position: relative;
+        }
+        
+        .editor-frame {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            transform: perspective(800px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+        
+        .editor-frame:hover {
+            transform: perspective(800px) rotateY(0deg);
+        }
+        
+        .editor-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .editor-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .editor-controls span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .editor-body {
+            padding: 1.5rem;
+            min-height: 250px;
+            background-color: #f9f9f9;
+        }
+        
+        .sample-text {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+        
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -335,8 +489,12 @@
                 margin-top: 1.5rem;
             }
             
-            .main-title, .subtitle, .syriac-title {
+            .main-title, .subtitle {
                 font-size: 1.5rem;
+            }
+
+            .syriac-title {
+                font-size: 1.8rem;
             }
             
             .mobile-menu-btn {
@@ -363,6 +521,24 @@
             .nav-links li {
                 margin: 0.5rem 0;
             }
+            
+            .video-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .editor-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .editor-frame {
+                transform: none;
+                margin-bottom: 2rem;
+            }
+            
+            .sample-text {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -379,9 +555,9 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#activities">Activities</a></li>
-                <li><a href="#videos">Videos</a></li>
+                <li><a href="#editor">Syriac Editor</a></li>
+                <li><a href="https://www.youtube.com/@മലങ്കരനസ്രാണിയോഗം-ഹെന്ദോഅക്കാദ" target="_blank">Videos</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="editor.html">Syriac Editor</a></li>
             </ul>
         </div>
     </nav>
@@ -417,7 +593,7 @@
             <div class="activities-grid">
                 <div class="activity-card">
                     <h3>Weekly Syriac Classes <span class="syriac">ܣܘܪܝܝܐ</span></h3>
-                    <p>Learn the ancient liturgical language of the Syro Malabar Church through our structured curriculum, taught by experienced instructors.</p>
+                    <p>Learn the ancient liturgical language of the Syro Malabar Church through our weekly classes, taught by experienced instructors.</p>
                 </div>
                 <div class="activity-card">
                     <h3>Field Visits</h3>
@@ -435,35 +611,77 @@
         </div>
     </section>
     
+    <!-- Syriac Editor Section -->
+    <section class="editor-showcase" id="editor">
+        <div class="container">
+            <h2>Syriac Editor <span class="syriac">ܡܲܟܬܒܵܢܵܐ ܣܘܼܪܝܵܝܵܐ</span></h2>
+            <div class="editor-content">
+                <div class="editor-info">
+                    <p>Our specialized Syriac editor provides a user-friendly interface for typing and working with Syriac text using the Karshon font. Whether you're a student, researcher, or enthusiast, this tool makes working with Syriac accessible to everyone.</p>
+                    <h3>Key Features:</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-keyboard"></i>
+                            <span>Easy-to-use virtual keyboard for Syriac characters</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-font"></i>
+                            <span>High-quality Karshon font rendering</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-export"></i>
+                            <span>Export text in multiple formats</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-save"></i>
+                            <span>Save and load your work</span>
+                        </li>
+                    </ul>
+                    <div class="editor-cta">
+                        <a href="/editor.html" class="editor-link">Try the Syriac Editor <span class="syriac">ܣܘܪܝܝܐ</span></a>
+                    </div>
+                </div>
+                <div class="editor-preview">
+                    <div class="editor-frame">
+                        <div class="editor-header">
+                            <span>Syriac Editor</span>
+                            <div class="editor-controls">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="editor-body">
+                            <div class="sample-text syriac">
+                                ܐܲܒܼܘܼܢ ܕܒܲܫܡܲܝܵܐ ܢܸܬܼܩܲܕܲܫ ܫܡܵܟܼ܂
+                                ܬܹܐܬܼܹܐ ܡܲܠܟܘܼܬܼܵܟܼ܂
+                                ܢܸܗܘܹܐ ܨܸܒܼܝܵܢܵܟܼ܂
+                                ܐܲܝܟܲܢܵܐ ܕܒܲܫܡܲܝܵܐ ܐܵܦ ܒܲܐܪܥܵܐ܂
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Videos Section -->
     <section class="videos" id="videos">
         <div class="container">
             <h2>Educational Videos</h2>
             <p>Explore our collection of educational videos on the Syro Malabar Church history, Syriac language, and Nasrani traditions.</p>
             
-            <div class="video-grid">
-                <div class="video-card">
-                    <img src="https://img.youtube.com/vi/placeholder1/maxresdefault.jpg" alt="Syriac Lessons">
-                    <div class="video-info">
-                        <h3>Introduction to Syriac Language <span class="syriac">ܠܫܢܐ ܣܘܪܝܝܐ</span></h3>
-                        <p>Learn the basics of Syriac script and pronunciation.</p>
-                    </div>
+            <div class="video-container">
+                <div class="video-embed">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/20hxafzZFwc?si=1CHvOc9rcIcB5X4F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 
-                <div class="video-card">
-                    <img src="https://img.youtube.com/vi/placeholder2/maxresdefault.jpg" alt="Nasrani History">
-                    <div class="video-info">
-                        <h3>History of Nasranies in Kerala</h3>
-                        <p>Exploring the ancient roots of Christianity in Kerala.</p>
-                    </div>
+                <div class="video-embed">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/WXfnEsYS8zQ?si=pLANSEidPgNbrPRB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 
-                <div class="video-card">
-                    <img src="https://img.youtube.com/vi/placeholder3/maxresdefault.jpg" alt="Liturgical Traditions">
-                    <div class="video-info">
-                        <h3>Syro Malabar Liturgical Traditions</h3>
-                        <p>Understanding the unique liturgical practices.</p>
-                    </div>
+                <div class="video-embed">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/KDcpJpDx7ms?si=yrjc8GZlcGgnJwLy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -478,8 +696,8 @@
             <div class="contact-info">
                 <h3>Get in Touch</h3>
                 <p>If you're interested in our programs or would like to learn more about the Nasrani heritage, please contact us:</p>
-                <p><strong>Email:</strong> info@hendoacademy.org</p>
-                <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+                <p><strong>Email:</strong> hendoacademy@gmail.com</p>
+                <!-- <p><strong>Phone:</strong> +91 XXXXXXXXXX</p> -->
                 <p><strong>Location:</strong> Kerala, India</p>
             </div>
         </div>
@@ -494,9 +712,10 @@
                     <ul>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#activities">Our Activities</a></li>
-                        <li><a href="#videos">Educational Videos</a></li>
+                        <li><a href="#editor">Syriac Editor</a></li>
+                        <li><a href="#videos">Our Videos</a></li>
+                        <li><a href="https://www.youtube.com/@മലങ്കരനസ്രാണിയോഗം-ഹെന്ദോഅക്കാദ" target="_blank">YouTube Channel</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="editor.html">Syriac Editor</a></li>
                     </ul>
                 </div>
                 
@@ -515,7 +734,7 @@
                     <p>Follow us on social media for updates on our activities and events.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@മലങ്കരനസ്രാണിയോഗം-ഹെന്ദോഅക്കാദ" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
