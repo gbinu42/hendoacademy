@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGCEBKYN5C"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HGCEBKYN5C');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | Hendo Academy</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Articles | Hendo Academy">
+    <meta name="description" content="Collection of articles from Hendo Academy about Syriac and the history of the Nasranies of India">
+    <meta name="keywords" content="Hendo Academy, Nasrani, Syriac, Syro Malabar Church, Articles, Publications">
+    <meta name="author" content="Hendo Academy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hendoacademy.org/articles/">
+    <meta property="og:title" content="Articles | Hendo Academy">
+    <meta property="og:description" content="Collection of articles from Hendo Academy about Syriac and the history of the Nasranies of India">
+    <meta property="og:image" content="https://www.hendoacademy.org/images/logo.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.hendoacademy.org/articles/">
+    <meta property="twitter:title" content="Articles | Hendo Academy">
+    <meta property="twitter:description" content="Collection of articles from Hendo Academy about Syriac and the history of the Nasranies of India">
+    <meta property="twitter:image" content="https://www.hendoacademy.org/images/logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logo.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="../images/logo.jpg">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Karshon';
+            src: url('../fonts/Karshon.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --primary-color: #8a3c3c;
+            --secondary-color: #d4a445;
+            --tertiary-color: #3c5c8a;
+            --text-color: #333;
+            --light-bg: #f8f5f0;
+            --dark-bg: #2b2620;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .syriac {
+            font-family: 'Karshon', serif;
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navbar Styles */
+        nav {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            height: 50px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Articles Listing Styles */
+        .articles-header {
+            background-color: var(--light-bg);
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .articles-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .articles-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .articles-description {
+            max-width: 800px;
+            margin: 1.5rem auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .articles-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .article-list {
+            list-style: none;
+        }
+        
+        .article-item {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #eee;
+            transition: transform 0.3s ease;
+        }
+        
+        .article-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-item:last-child {
+            border-bottom: none;
+        }
+        
+        .article-item h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .article-item h2 a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .article-item h2 a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--tertiary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .article-item h2 a:hover {
+            color: var(--tertiary-color);
+        }
+        
+        .article-item h2 a:hover::after {
+            width: 100%;
+        }
+        
+        .article-meta {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .article-meta i {
+            margin-right: 0.5rem;
+            color: var(--tertiary-color);
+        }
+        
+        .article-excerpt {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .article-image-preview {
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-preview-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        
+        .article-image-preview:hover .article-preview-image {
+            transform: scale(1.03);
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--tertiary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--tertiary-color);
+            border-radius: 4px;
+        }
+        
+        .read-more:hover {
+            background-color: var(--tertiary-color);
+            color: white;
+        }
+        
+        .read-more i {
+            margin-left: 0.5rem;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-home:hover {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .back-to-home i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html">
+                <img src="../images/logo.jpg" alt="Hendo Academy Logo" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="index.html">Articles</a>
+                <a href="../index.html#activities">Activities</a>
+                <a href="../index.html#editor">Syriac Editor</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="articles-content">
+            <header class="articles-header">
+                <h1 class="articles-title">Articles <span class="syriac">ܡܐܡܪ̈ܐ</span></h1>
+                <p class="articles-description">A collection of scholarly articles on Syriac language, culture, and the history of the Nasranies of India, exploring the rich heritage of Saint Thomas Christians.</p>
+            </header>
+            
+            <ul class="article-list">
+                <li class="article-item">
+                    <h2><a href="beth-aprem-nazrani-dayra.html">Beth Aprem: Nazrani Dayra</a></h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> Fr. Thomas Koonammakal</span>
+                        <span><i class="fas fa-calendar-alt"></i> May 10, 2023</span>
+                    </div>
+                    <p class="article-excerpt">An exploration of the Beth Aprem tradition among the Saint Thomas Christians of India. This article examines the unique synthesis of Syriac monastic traditions and Indian cultural expressions in the Nazrani Dayra, highlighting their historical significance and contemporary relevance in preserving the distinctive identity of the Syro Malabar Church.</p>
+                    <div class="article-image-preview">
+                        <img src="images/beth-aprem-nazrani-dayra/preview.jpg" alt="Beth Aprem preview" class="article-preview-image">
+                    </div>
+                    <a href="beth-aprem-nazrani-dayra.html" class="read-more">Read Article <i class="fas fa-book-open"></i></a>
+                </li>
+                <!-- More articles can be added here as they become available -->
+            </ul>
+            
+            <a href="../index.html" class="back-to-home">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Hendo Academy</h3>
+                <p>Promoting the study of Syriac and the history of the Nasranies of India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: [email to be added]</p>
+                <p>Phone: [phone to be added]</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

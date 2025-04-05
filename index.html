@@ -576,6 +576,153 @@
                 font-size: 1.2rem;
             }
         }
+        
+        /* Articles Section Styles */
+        .articles-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+            background-image: linear-gradient(135deg, #f8f9fa 0%, #eaeef1 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .articles-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(138, 60, 60, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .articles-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(60, 92, 138, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .articles-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .articles-cta {
+            margin-top: 1.5rem;
+        }
+        
+        .articles-link {
+            display: inline-block;
+            background-color: var(--tertiary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .articles-link:hover {
+            background-color: #345580;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .articles-link i {
+            margin-left: 8px;
+        }
+        
+        .featured-articles {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .article-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-color);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-card-content {
+            padding: 2rem;
+        }
+        
+        .article-card h3 {
+            margin-top: 0;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        
+        .article-card h3 a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .article-card h3 a:hover {
+            color: var(--tertiary-color);
+        }
+        
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .article-meta span {
+            position: relative;
+            padding-left: 0;
+        }
+        
+        .article-excerpt {
+            margin-bottom: 1.5rem;
+            color: #444;
+            line-height: 1.7;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--tertiary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--primary-color);
+        }
+        
+        .read-more i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -585,16 +732,16 @@
             <a href="index.html">
                 <img src="images/logo.jpg" alt="Hendo Academy Logo" class="logo-small">
             </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#editor">Syriac Editor</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#editor">Syriac Editor</a></li>
-                <li><a href="https://www.youtube.com/@മലങ്കരനസ്രാണിയോഗം-ഹെന്ദോഅക്കാദ" target="_blank">Videos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </div>
     </nav>
     
@@ -643,6 +790,33 @@
                     <h3>History Lecture Series</h3>
                     <p>Attend our comprehensive lecture series covering the extensive history of the Syro Malabar Church and the Nasrani community in India.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Articles Section -->
+    <section class="articles-section" id="articles">
+        <div class="container">
+            <h2>Articles <span class="syriac">ܡܐܡܪ̈ܐ</span></h2>
+            <div class="articles-intro">
+                <p>Explore our collection of scholarly articles on Syriac language, culture, and the history of the Nasranies of India. Our contributors include esteemed scholars and researchers in the field.</p>
+                <div class="articles-cta">
+                    <a href="articles/index.html" class="articles-link">Browse All Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="featured-articles">
+                <div class="article-card">
+                    <div class="article-card-content">
+                        <h3><a href="articles/beth-aprem-nazrani-dayra.html">Beth Aprem: Nazrani Dayra</a></h3>
+                        <div class="article-meta">
+                            <span>By Fr. Thomas Koonammakal</span>
+                        </div>
+                        <p class="article-excerpt">An in-depth exploration of Beth Aprem and the Nazrani Dayra traditions in the context of Syro Malabar Church history.</p>
+                        <a href="articles/beth-aprem-nazrani-dayra.html" class="read-more">Read Article <i class="fas fa-book-open"></i></a>
+                    </div>
+                </div>
+                <!-- More featured articles can be added here in the future -->
             </div>
         </div>
     </section>
@@ -747,10 +921,10 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#about">About Us</a></li>
+                        <li><a href="#articles">Articles</a></li>
                         <li><a href="#activities">Our Activities</a></li>
                         <li><a href="#editor">Syriac Editor</a></li>
                         <li><a href="#videos">Our Videos</a></li>
-                        <li><a href="https://www.youtube.com/@മലങ്കരനസ്രാണിയോഗം-ഹെന്ദോഅക്കാദ" target="_blank">YouTube Channel</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
