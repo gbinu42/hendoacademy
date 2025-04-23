@@ -118,6 +118,15 @@
             color: var(--secondary-color);
         }
         
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
         /* Article Styles */
         .article-header {
             background-color: var(--light-bg);
@@ -252,6 +261,143 @@
                 margin: 1.5rem auto;
                 max-width: 100%;
                 display: block;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: var(--dark-bg);
+                padding: 1rem 0;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-container {
+                justify-content: space-between;
+                width: 100%;
+            }
+            
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .article-content {
+                padding: 1rem 0;
+            }
+            
+            .article-body {
+                padding: 0 1rem;
+            }
+            
+            .article-section-title {
+                font-size: 1.3rem;
+            }
+            
+            .syriac-quote {
+                font-size: 1.5rem;
+                padding: 0.5rem;
+                margin: 2rem 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .article-author {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .author-image-container-footer {
+                float: none;
+                margin: 0 auto 1rem;
+            }
+            
+            .author-image-footer {
+                width: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .article-title {
+                font-size: 1.7rem;
+            }
+            
+            .article-header {
+                padding: 2rem 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .author-image {
+                width: 180px;
+            }
+            
+            .article-content p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            .back-to-home {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            blockquote {
+                padding: 1rem;
+                margin: 1.5rem 0;
+            }
+            
+            .article-section {
+                margin: 2rem 0;
+            }
+            
+            .syriac-quote {
+                font-size: 1.3rem;
+            }
+            
+            footer {
+                padding: 1.5rem 0;
+                margin-top: 2rem;
+            }
+            
+            .footer-section {
+                margin-bottom: 1.5rem;
+            }
+            
+            .footer-section:last-child {
+                margin-bottom: 0;
+            }
+            
+            .author-image-footer {
+                width: 150px;
             }
         }
         
@@ -441,6 +587,9 @@
             <a href="../index.html">
                 <img src="../images/logo.jpg" alt="Hendo Academy Logo" class="nav-logo">
             </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-links">
                 <a href="../index.html">Home</a>
                 <a href="../index.html#about">About</a>
@@ -713,5 +862,27 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Close mobile menu when a link is clicked
+            const navLinkItems = document.querySelectorAll('.nav-links a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
