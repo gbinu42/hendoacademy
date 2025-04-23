@@ -16,7 +16,7 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Turgama d'evangelion - Hendo Academy">
     <meta name="description" content="Study the Turgama d'evangelion with parallel Syriac and Malayalam text. An essential resource for understanding Syriac liturgy and Nasrani heritage.">
-    <meta name="keywords" content="Turgama, Syriac, Malayalam, Nasrani, liturgy, translation">
+    <meta name="keywords" content="Turgama, Syriac, Malayalam, Nasrani, liturgy, translation, suriyani, suryiani malayalam, malayalam garshuni, karshoni, karshon, garshuni">
     <meta name="author" content="Hendo Academy">
     
     <!-- Open Graph / Facebook -->
@@ -150,12 +150,26 @@
             margin-bottom: 20px;
         }
         
+        .subtitle-container {
+            margin: 1.5rem auto;
+            max-width: 800px;
+        }
+        
         .subtitle {
             font-size: 1.2rem;
             color: var(--text-color);
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 0.8rem;
             line-height: 1.6;
+        }
+        
+        .primary-subtitle {
+            font-weight: 600;
+        }
+        
+        .attribution-subtitle {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #555;
         }
         
         .syriac-title {
@@ -323,6 +337,11 @@
             
             .subtitle {
                 font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .attribution-subtitle {
+                font-size: 0.95rem;
             }
             
             .article-header {
@@ -446,7 +465,7 @@
             </button>
             <div class="nav-links">
                 <a href="../">Home</a>
-                <a href="/">Articles</a>
+                <a href="/articles">Articles</a>
                 <a href="/editor">Syriac Editor</a>
             </div>
         </div>
@@ -463,7 +482,10 @@
                     <span><i class="fas fa-user"></i>Binu George</span>
                     <span><i class="fas fa-calendar-alt"></i>April 22, 2025</span>
                 </div>
-                <p class="subtitle">A Karshon (Suriyani Malayalam) rendering of the Malayalam translation of the Turgama of the Evangelion, as used before the Gospel Procession in the Syro Malabar Qurbana</p>
+                <div class="subtitle-container">
+                    <p class="subtitle primary-subtitle">A Karshon (Suriyani Malayalam) rendering of the Malayalam translation of the Turgama of the Evangelion, as used before the Gospel Procession in the Syro Malabar Qurbana</p>
+                    <p class="subtitle attribution-subtitle">This highly poetic translation from the original Syriac was made by the late Thelliyil Mani Malpan (Rev. Fr. Emmanuel Thelly), one of the founding members of Hendo Academy.</p>
+                </div>
             </header>
             
             <img src="./images/turgama/gospel-procession.png" alt="Gospel Procession in Syriac Liturgy" class="featured-image">
@@ -633,7 +655,11 @@
                     <p>ചെവിയുള്ളവനോ കേട്ടു ഫലങ്ങൾ നൽകീടട്ടെ.</p>
                 </div>
             </div>
+            <a href="/articles" class="back-to-home">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
         </article>
+        
     </main>
 
     <footer>
