@@ -116,6 +116,15 @@
             color: var(--secondary-color);
         }
         
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
         /* Article Styles */
         .article-content {
             max-width: 1200px;
@@ -205,9 +214,143 @@
         @media (max-width: 768px) {
             .parallel-text {
                 flex-direction: column;
+                gap: 10px;
+                margin-bottom: 30px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                overflow: hidden;
             }
+            
+            .syriac-text, .malayalam-text {
+                border-radius: 0;
+            }
+            
+            .syriac-text {
+                border-bottom: none;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                padding-bottom: 15px;
+            }
+            
+            .malayalam-text {
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                background-color: #f9f9f9;
+            }
+            
             .title-container {
                 flex-direction: column;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+            
+            .syriac-title {
+                font-size: 2.5rem;
+            }
+            
+            .english-title {
+                font-size: 2rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .syriac-text {
+                font-size: 1.5em;
+            }
+            
+            .featured-image {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            
+            .article-header {
+                padding: 2rem 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .article-content {
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .syriac-title {
+                font-size: 2rem;
+            }
+            
+            .english-title {
+                font-size: 1.7rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .article-header {
+                padding: 1.5rem 1rem;
+            }
+            
+            .syriac-text {
+                font-size: 1.3em;
+                padding: 10px;
+            }
+            
+            .malayalam-text {
+                padding: 10px;
+            }
+            
+            .article-meta {
+                gap: 0.5rem;
+                font-size: 0.85rem;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.1rem;
+            }
+            
+            .back-to-home {
+                margin-top: 1.5rem;
+                width: 100%;
+                text-align: center;
             }
         }
         
@@ -298,6 +441,9 @@
             <a href="../index.html">
                 <img src="../images/logo.jpg" alt="Hendo Academy Logo" class="nav-logo">
             </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-links">
                 <a href="../index.html">Home</a>
                 <a href="../index.html#about">About</a>
@@ -512,5 +658,27 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Close mobile menu when a link is clicked
+            const navLinkItems = document.querySelectorAll('.nav-links a');
+            navLinkItems.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
