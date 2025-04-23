@@ -1,0 +1,37 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Syriac Content Guide
+
+## Fonts and Typography
+- The website uses a custom Syriac font called "Karshon" located in the fonts directory
+- Syriac text is displayed right-to-left (RTL) with the direction: rtl CSS property
+- Syriac text typically uses a larger font size (1.5-1.8em) for better readability
+
+## Parallel Text Structure
+Syriac content is typically displayed in a parallel structure with:
+- Syriac text (right side or top on mobile)
+- Malayalam translation (left side or bottom on mobile)
+
+## HTML Structure for Parallel Text
+```html
+<div class="parallel-text">
+    <div class="syriac-text">
+        <!-- Syriac text here (RTL) -->
+    </div>
+    <div class="malayalam-text">
+        <!-- Malayalam translation here -->
+    </div>
+</div>
+```
+
+## Key CSS Classes
+- `.syriac-text` - For Syriac content with RTL direction
+- `.syriac-title` - For Syriac headings
+- `.malayalam-text` - For Malayalam translations
+- `.parallel-text` - Container for side-by-side display
+
+## Responsive Design Notes
+On mobile screens (max-width: 768px), the parallel text structure changes from horizontal to vertical layout, with Syriac text on top and Malayalam text below.
