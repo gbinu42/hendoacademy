@@ -9,7 +9,7 @@ alwaysApply: false
 The Hendo Academy website is focused on promoting the study of Syriac and the history of Nasranies of India. The site contains educational content, articles, and tools for learning Syriac.
 
 ## Main Pages
-- [index.html](mdc:index.html) - Main homepage with sections for About, Activities, Syriac Editor, and Contact
+- [index.html](mdc:index.html) - Main homepage with sections for About, Activities, Syriac Editor, Articles and Contact
 - [articles/index.html](mdc:articles/index.html) - Articles index page listing all available articles
 
 ## Articles
@@ -32,3 +32,4 @@ The website uses a consistent styling approach with:
 - Uses jQuery for DOM manipulation
 - Custom fonts for Syriac text rendering
 - Mobile-first responsive design with CSS media queries
+- Never add .html to hrefs and other links
