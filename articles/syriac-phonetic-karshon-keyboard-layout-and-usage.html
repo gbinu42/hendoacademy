@@ -73,6 +73,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         /* Navigation Styles */
@@ -83,6 +85,8 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .nav-container {
@@ -90,6 +94,11 @@
             justify-content: space-between;
             align-items: center;
             height: 60px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            box-sizing: border-box;
         }
         
         .nav-logo {
@@ -147,6 +156,8 @@
             background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .article-header {
@@ -273,6 +284,29 @@
         }
         
         @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                left: 0;
+                right: 0;
+                box-sizing: border-box;
+            }
+            
+            .article-content {
+                padding: 15px;
+                margin: 0;
+                width: 100%;
+            }
+            
+            .keyboard-table-container {
+                margin: 0 -15px;
+                padding: 0 15px;
+                width: calc(100% + 30px);
+            }
+            
             .nav-brand-text {
                 max-width: 120px;
                 font-size: 0.9rem;
@@ -369,6 +403,8 @@
             overflow-x: auto;
             margin: 1rem 0;
             -webkit-overflow-scrolling: touch;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .keyboard-table {
@@ -376,27 +412,40 @@
             border-collapse: collapse;
             border: 1px solid #ddd;
             margin: 0;
-            min-width: 500px; /* Ensure table doesn't get too compressed */
+            table-layout: fixed;
         }
 
-        .keyboard-table th {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-            background-color: var(--light-bg);
-            white-space: nowrap;
-        }
-
+        .keyboard-table th,
         .keyboard-table td {
             padding: 12px;
             border: 1px solid #ddd;
             vertical-align: middle;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
-        .syriac-char {
-            font-family: 'Karshon' ;
+        .keyboard-table th {
+            text-align: left;
+            background-color: var(--light-bg);
+            white-space: normal;
+        }
+
+        .keyboard-table td:first-child {
+            width: 20%;
+        }
+
+        .keyboard-table td:nth-child(2) {
+            width: 30%;
+        }
+
+        .keyboard-table td:last-child {
+            width: 50%;
+        }
+
+        .keyboard-table .syriac-char {
+            font-family: 'Karshon';
             src: url('../assets/fonts/Karshon.ttf') format('truetype');
-            font-size: 2em;
+            font-size: 2em !important;
             line-height: 1.2;
             text-align: center;
         }
@@ -432,8 +481,12 @@
                 font-size: 0.9rem;
             }
 
+            .keyboard-table .syriac-char {
+                font-size: 1.8em !important;
+            }
+            
             .malayalam-char {
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
 
             .article-header {
@@ -447,6 +500,8 @@
             .section-content {
                 font-size: 1rem;
             }
+
+            
         }
 
         @media (max-width: 480px) {
@@ -462,14 +517,14 @@
                 font-size: 1.1rem;
             }
 
-            .keyboard-table th,
-            .keyboard-table td {
-                padding: 6px;
-                font-size: 0.85rem;
-            }
+           
 
+            .keyboard-table .syriac-char {
+                font-size: 1.6em !important;
+            }
+            
             .malayalam-char {
-                font-size: 1.1em;
+                font-size: 1.2em;
             }
 
             .article-header {
