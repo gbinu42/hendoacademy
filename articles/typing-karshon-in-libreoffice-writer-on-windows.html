@@ -44,7 +44,7 @@
     <style>
         @font-face {
             font-family: 'Karshon';
-            src: url('../assets/fonts/Karshon.ttf') format('truetype');
+            src: url('../assets`/fonts/Karshon.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -92,6 +92,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 60px;
+            position: relative;
         }
         
         .nav-logo {
@@ -102,34 +104,32 @@
         .nav-brand {
             display: flex;
             align-items: center;
+            gap: 1rem;
             text-decoration: none;
+            min-width: 0; /* Allow flex item to shrink */
         }
         
         .nav-brand-text {
             color: white;
             font-size: 1.2rem;
             font-weight: 600;
-            margin-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
         .nav-links {
             display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-        
-        .nav-links li {
-            margin-left: 1.5rem;
+            gap: 2rem;
+            margin-left: 2rem;
         }
         
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
-            white-space: normal;
-            word-wrap: break-word;
+            transition: color 0.3s;
+            white-space: nowrap;
         }
         
         .nav-links a:hover {
@@ -143,6 +143,18 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
+            padding: 0.5rem;
+            margin-left: 1rem;
+        }
+        
+        @media (max-width: 992px) {
+            .nav-brand-text {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
         }
         
         @media (max-width: 768px) {
@@ -151,43 +163,51 @@
             }
             
             .nav-links {
+                display: none;
+                flex-direction: column;
                 position: absolute;
                 top: 60px;
                 left: 0;
                 right: 0;
                 background-color: var(--dark-bg);
-                flex-direction: column;
-                align-items: center;
                 padding: 1rem 0;
-                display: none;
+                text-align: center;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 100%;
+                z-index: 100;
+                margin-left: 0;
+                gap: 1rem;
             }
             
             .nav-links.active {
                 display: flex;
             }
             
-            .nav-links li {
-                margin: 0.5rem 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            .nav-links a {
-                display: block;
-                padding: 0.5rem;
+            .nav-container {
+                justify-content: space-between;
                 width: 100%;
             }
             
-            .section-content {
-                word-wrap: break-word;
-                overflow-wrap: break-word;
+            .nav-brand-text {
+                max-width: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-brand-text {
+                max-width: 120px;
+                font-size: 0.9rem;
             }
             
-            .section-content a {
-                display: inline-block;
-                max-width: 100%;
+            .nav-logo {
+                height: 40px;
+            }
+            
+            .nav-container {
+                height: 50px;
+            }
+            
+            .nav-links {
+                top: 50px;
             }
         }
         
@@ -377,6 +397,7 @@
         
         /* Footer Styles */
         footer {
+            margin-top: 3rem;
             background-color: var(--dark-bg);
             color: white;
             padding: 3rem 0 1.5rem;
@@ -438,10 +459,6 @@
         @media (max-width: 1200px) {
             .container {
                 padding: 0 20px;
-            }
-            
-            .article-content {
-                padding: 0 15px;
             }
         }
         
@@ -531,15 +548,11 @@
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links">
-                <li><a href="../">Home</a></li>
-                <li><a href="../#about">About</a></li>
-                <li><a href="../#activities">Activities</a></li>
-                <li><a href="../#editor">Syriac Editor</a></li>
-                <li><a href="../articles">Articles</a></li>
-                <li><a href="https://www.youtube.com/@മലങ്കരനസ്രാണിയോഗം-ഹെന്ദോഅക്കാദ" target="_blank">Videos</a></li>
-                <li><a href="../#contact">Contact</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="../">Home</a>
+                <a href="/articles">Articles</a>
+                <a href="/editor">Syriac Editor</a>
+            </div>
         </div>
     </nav>
 
