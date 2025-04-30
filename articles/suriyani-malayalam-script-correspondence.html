@@ -96,15 +96,36 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 60px;
+            position: relative;
         }
         
         .nav-logo {
             height: 50px;
+            width: auto;
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            min-width: 0; /* Allow flex item to shrink */
+        }
+        
+        .nav-brand-text {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
         .nav-links {
             display: flex;
             gap: 2rem;
+            margin-left: 2rem;
         }
         
         .nav-links a {
@@ -112,6 +133,7 @@
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
+            white-space: nowrap;
         }
         
         .nav-links a:hover {
@@ -125,6 +147,8 @@
             color: white;
             font-size: 1.5rem;
             cursor: pointer;
+            padding: 0.5rem;
+            margin-left: 1rem;
         }
         
         /* Article Styles */
@@ -372,6 +396,14 @@
             .example-word {
                 font-size: 1rem;
             }
+            
+            .nav-brand-text {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
         }
         
         @media (max-width: 768px) {
@@ -386,11 +418,17 @@
             .nav-links {
                 display: none;
                 flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                width: 100%;
-                text-align: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: var(--dark-bg);
                 padding: 1rem 0;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+                margin-left: 0;
+                gap: 1rem;
             }
             
             .nav-links.active {
@@ -398,9 +436,12 @@
             }
             
             .nav-container {
-                flex-direction: row;
                 justify-content: space-between;
                 width: 100%;
+            }
+            
+            .nav-brand-text {
+                max-width: 150px;
             }
             
             .syriac-title {
@@ -510,6 +551,23 @@
             .section-title {
                 font-size: 1.5rem;
             }
+            
+            .nav-brand-text {
+                max-width: 120px;
+                font-size: 0.9rem;
+            }
+            
+            .nav-logo {
+                height: 40px;
+            }
+            
+            .nav-container {
+                height: 50px;
+            }
+            
+            .nav-links {
+                top: 50px;
+            }
         }
         
         @media (max-width: 360px) {
@@ -536,8 +594,9 @@
 <body>
     <nav>
         <div class="container nav-container">
-            <a href="../">
+            <a href="../" class="nav-brand">
                 <img src="../images/logo.jpg" alt="Hendo Academy Logo" class="nav-logo">
+                <span class="nav-brand-text">Hendo Academy</span>
             </a>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
