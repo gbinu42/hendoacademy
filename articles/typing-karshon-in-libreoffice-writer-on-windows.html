@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGCEBKYN5C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-HGCEBKYN5C');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Karshon in LibreOffice Writer on Windows | Hendo Academy</title>
-    
+
     <!-- Primary Meta Tags -->
     <meta name="title" content="Typing Karshon in LibreOffice Writer on Windows | Hendo Academy">
-    <meta name="description" content="A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on Windows">
-    <meta name="keywords" content="Karshon, Suriyani Malayalam, Malayalam Garshuni, LibreOffice, Windows, Typing Guide, Hendo Academy">
+    <meta name="description"
+        content="A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on Windows">
+    <meta name="keywords"
+        content="Karshon, Suriyani Malayalam, Malayalam Garshuni, LibreOffice, Windows, Typing Guide, Hendo Academy">
     <meta name="author" content="Hendo Academy">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.hendoacademy.org/articles/type-karshon-in-libreoffice-writer-on-windows">
+    <meta property="og:url"
+        content="https://www.hendoacademy.org/articles/type-karshon-in-libreoffice-writer-on-windows">
     <meta property="og:title" content="Typing Karshon in LibreOffice Writer on Windows | Hendo Academy">
-    <meta property="og:description" content="A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on Windows">
+    <meta property="og:description"
+        content="A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on Windows">
     <meta property="og:image" content="https://www.hendoacademy.org/assets/images/logo.jpg">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.hendoacademy.org/articles/type-karshon-in-libreoffice-writer-on-windows">
+    <meta property="twitter:url"
+        content="https://www.hendoacademy.org/articles/type-karshon-in-libreoffice-writer-on-windows">
     <meta property="twitter:title" content="Typing Karshon in LibreOffice Writer on Windows | Hendo Academy">
-    <meta property="twitter:description" content="A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on Windows">
+    <meta property="twitter:description"
+        content="A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on Windows">
     <meta property="twitter:image" content="https://www.hendoacademy.org/assets/images/logo.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="../assets/images/logo.jpg" type="image/jpeg">
     <link rel="apple-touch-icon" href="../assets/images/logo.jpg">
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
         @font-face {
             font-family: 'Karshon';
@@ -48,7 +55,7 @@
             font-weight: normal;
             font-style: normal;
         }
-        
+
         :root {
             --primary-color: #8a3c3c;
             --secondary-color: #d4a445;
@@ -57,26 +64,26 @@
             --light-bg: #f8f5f0;
             --dark-bg: #2b2620;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--text-color);
             line-height: 1.6;
             background-color: #f5f5f5;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* Navbar Styles */
         nav {
             background-color: var(--dark-bg);
@@ -87,7 +94,7 @@
             z-index: 1000;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
-        
+
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -95,20 +102,21 @@
             height: 60px;
             position: relative;
         }
-        
+
         .nav-logo {
             height: 50px;
             width: auto;
         }
-        
+
         .nav-brand {
             display: flex;
             align-items: center;
             gap: 1rem;
             text-decoration: none;
-            min-width: 0; /* Allow flex item to shrink */
+            min-width: 0;
+            /* Allow flex item to shrink */
         }
-        
+
         .nav-brand-text {
             color: white;
             font-size: 1.2rem;
@@ -117,13 +125,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2rem;
             margin-left: 2rem;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -131,11 +139,11 @@
             transition: color 0.3s;
             white-space: nowrap;
         }
-        
+
         .nav-links a:hover {
             color: var(--secondary-color);
         }
-        
+
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -146,22 +154,22 @@
             padding: 0.5rem;
             margin-left: 1rem;
         }
-        
+
         @media (max-width: 992px) {
             .nav-brand-text {
                 font-size: 1rem;
             }
-            
+
             .nav-links {
                 gap: 1.5rem;
             }
         }
-        
+
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -177,49 +185,49 @@
                 margin-left: 0;
                 gap: 1rem;
             }
-            
+
             .nav-links.active {
                 display: flex;
             }
-            
+
             .nav-container {
                 justify-content: space-between;
                 width: 100%;
             }
-            
+
             .nav-brand-text {
                 max-width: 150px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .nav-brand-text {
                 max-width: 120px;
                 font-size: 0.9rem;
             }
-            
+
             .nav-logo {
                 height: 40px;
             }
-            
+
             .nav-container {
                 height: 50px;
             }
-            
+
             .nav-links {
                 top: 50px;
             }
         }
-        
+
         /* Article Styles */
         .article-content {
             max-width: 800px;
             margin: 0 auto;
             background-color: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .article-header {
             background-color: var(--light-bg);
             padding: 3rem 1.5rem;
@@ -227,7 +235,7 @@
             text-align: center;
             border-bottom: 3px solid var(--primary-color);
         }
-        
+
         .article-title {
             font-size: 2rem;
             color: var(--primary-color);
@@ -235,7 +243,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .article-title::after {
             content: '';
             position: absolute;
@@ -246,7 +254,7 @@
             height: 3px;
             background-color: var(--secondary-color);
         }
-        
+
         .article-meta {
             margin: 1rem 0;
             display: flex;
@@ -256,21 +264,21 @@
             font-size: 0.95rem;
             color: #666;
         }
-        
+
         .article-meta span {
             display: flex;
             align-items: center;
         }
-        
+
         .article-meta i {
             margin-right: 0.5rem;
             color: var(--tertiary-color);
         }
-        
+
         .article-section {
             margin-bottom: 3rem;
         }
-        
+
         .section-title {
             color: var(--primary-color);
             font-size: 1.5rem;
@@ -278,16 +286,16 @@
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--light-bg);
         }
-        
+
         .section-content {
             font-size: 0.95rem;
             line-height: 1.8;
         }
-        
+
         .section-content p {
             margin-bottom: 1.2rem;
         }
-        
+
         .section-content img {
             max-width: 100%;
             height: auto;
@@ -295,25 +303,25 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .section-content a {
             word-wrap: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
         }
-        
+
         .step-list {
             list-style-type: none;
             counter-reset: step-counter;
         }
-        
+
         .step-list li {
             margin-bottom: 2rem;
             padding-left: 3rem;
             position: relative;
             font-size: 0.95rem;
         }
-        
+
         .step-list li::before {
             content: counter(step-counter);
             counter-increment: step-counter;
@@ -332,7 +340,7 @@
             font-weight: 600;
             font-size: 0.8rem;
         }
-        
+
         .note-box {
             background-color: var(--light-bg);
             border-left: 4px solid var(--secondary-color);
@@ -340,7 +348,7 @@
             margin: 1.5rem 0;
             font-size: 0.95rem;
         }
-        
+
         .warning-box {
             background-color: #fff3f3;
             border-left: 4px solid #ff6b6b;
@@ -348,13 +356,13 @@
             margin: 1.5rem 0;
             font-size: 0.95rem;
         }
-        
+
         .warning-box strong {
             color: #d63031;
             display: block;
             margin-bottom: 0.5rem;
         }
-        
+
         .back-to-home {
             display: inline-block;
             margin-top: 2rem;
@@ -366,35 +374,35 @@
             border-radius: 4px;
             transition: all 0.3s ease;
         }
-        
+
         .back-to-home:hover {
             background-color: var(--primary-color);
             color: white;
         }
-        
+
         .back-to-home i {
             margin-right: 0.5rem;
         }
-        
+
         .step-image {
             margin: 1rem 0 2rem;
             text-align: center;
         }
-        
+
         .step-image img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .step-image-caption {
             margin-top: 0.5rem;
             font-size: 0.85rem;
             color: #666;
             font-style: italic;
         }
-        
+
         /* Footer Styles */
         footer {
             margin-top: 3rem;
@@ -402,142 +410,145 @@
             color: white;
             padding: 3rem 0 1.5rem;
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section h3 {
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        
+
         .footer-section ul {
             list-style: none;
         }
-        
+
         .footer-section ul li {
             margin-bottom: 0.5rem;
         }
-        
+
         .footer-section a {
             color: #ddd;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .footer-section a:hover {
             color: var(--secondary-color);
         }
-        
+
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
         }
-        
+
         .social-links a {
             color: white;
             font-size: 1.3rem;
             transition: color 0.3s ease;
         }
-        
+
         .social-links a:hover {
             color: var(--secondary-color);
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Responsive Styles */
         @media (max-width: 1200px) {
             .container {
                 padding: 0 20px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .article-title {
                 font-size: 1.7rem;
             }
-            
+
             .article-header {
                 padding: 2rem 0;
                 margin-bottom: 1rem;
             }
-            
+
             .article-content {
                 font-size: 0.95rem;
                 line-height: 1.5;
             }
-            
+
             .article-content h2 {
                 font-size: 1.3rem;
             }
-            
+
             .article-content h3 {
                 font-size: 1.2rem;
             }
-            
+
             .article-content p {
                 font-size: 0.95rem;
             }
-            
-            .note-box, .warning-box {
+
+            .note-box,
+            .warning-box {
                 padding: 0.8rem;
                 margin: 1rem 0;
             }
-            
-            .note-box h4, .warning-box h4 {
+
+            .note-box h4,
+            .warning-box h4 {
                 font-size: 1rem;
             }
-            
+
             .step-list {
                 padding-left: 1.2rem;
             }
-            
+
             .step-list li {
                 margin-bottom: 1.2rem;
             }
-            
+
             .step-image {
                 margin: 0.8rem 0;
             }
-            
+
             .step-image-caption {
                 font-size: 0.85rem;
             }
-            
+
             .back-to-home {
                 display: block;
                 text-align: center;
                 width: 100%;
             }
-            
+
             .container {
                 padding: 0 15px;
             }
-            
+
             footer {
                 padding: 1.5rem 0;
             }
-            
+
             .footer-section {
                 margin-bottom: 1.5rem;
             }
-            
+
             .footer-section:last-child {
                 margin-bottom: 0;
             }
         }
     </style>
 </head>
+
 <body>
     <nav>
         <div class="container nav-container">
@@ -565,19 +576,21 @@
                     <span><i class="fas fa-calendar-alt"></i>April 30, 2025</span>
                 </div>
             </header>
-            
+
             <section class="article-section">
                 <h2 class="section-title">Related Articles</h2>
                 <div class="section-content">
                     <ul style="list-style: none; padding: 0; margin: 1rem 0;">
                         <li style="margin-bottom: 1rem;">
-                            <a href="/articles/typing-karshon-in-libreoffice-writer-on-macos" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-block; padding: 0.5rem 1rem; background-color: var(--light-bg); border-radius: 4px; transition: background-color 0.3s;">
+                            <a href="/articles/typing-karshon-in-libreoffice-writer-on-macos"
+                                style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-block; padding: 0.5rem 1rem; background-color: var(--light-bg); border-radius: 4px; transition: background-color 0.3s;">
                                 <i class="fas fa-file-alt" style="margin-right: 0.5rem;"></i>
                                 Typing Karshon in LibreOffice Writer on macOS
                             </a>
                         </li>
                         <li style="margin-bottom: 1rem;">
-                            <a href="/articles/syriac-phonetic-karshon-keyboard-layout-and-usage" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-block; padding: 0.5rem 1rem; background-color: var(--light-bg); border-radius: 4px; transition: background-color 0.3s;">
+                            <a href="/articles/syriac-phonetic-karshon-keyboard-layout-and-usage"
+                                style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-block; padding: 0.5rem 1rem; background-color: var(--light-bg); border-radius: 4px; transition: background-color 0.3s;">
                                 <i class="fas fa-keyboard" style="margin-right: 0.5rem;"></i>
                                 Karshon Keyboard Layout Guide
                             </a>
@@ -585,14 +598,17 @@
                     </ul>
                 </div>
             </section>
-            
+
             <section class="article-section">
                 <h2 class="section-title">Introduction</h2>
                 <div class="section-content">
-                    <p>This guide will walk you through the process of setting up and using Karshon (Suriyani Malayalam) typing in LibreOffice Writer on Windows. While Microsoft Word is a popular word processor, it currently lacks full support for typing Karshon, making LibreOffice Writer the recommended choice for this purpose. Follow these steps carefully to ensure proper functionality.</p>
+                    <p>This guide will walk you through the process of setting up and using Karshon (Suriyani Malayalam)
+                        typing in LibreOffice Writer on Windows. While Microsoft Word is a popular word processor, it
+                        currently lacks full support for typing Karshon, making LibreOffice Writer the recommended
+                        choice for this purpose. Follow these steps carefully to ensure proper functionality.</p>
                 </div>
             </section>
-            
+
             <section class="article-section">
                 <h2 class="section-title">Prerequisites</h2>
                 <div class="section-content">
@@ -604,35 +620,44 @@
                     </ul>
                 </div>
             </section>
-            
+
             <section class="article-section">
                 <h2 class="section-title">Installation Steps</h2>
                 <div class="section-content">
                     <ol class="step-list">
                         <li>
                             <strong>Install LibreOffice</strong>
-                            <p>Download and install the latest version of LibreOffice from the official website: <a href="https://www.libreoffice.org/download/download-libreoffice/" target="_blank">https://www.libreoffice.org/download/download-libreoffice/</a></p>
-                           
+                            <p>Download and install the latest version of LibreOffice from the official website: <a
+                                    href="https://www.libreoffice.org/download/download-libreoffice/"
+                                    target="_blank">https://www.libreoffice.org/download/download-libreoffice/</a></p>
+
                         </li>
-                        
+
                         <li>
                             <strong>Install Karshon Keyboard</strong>
-                            <p>Download Hendo Academy's Syriac Phonetic - Karshon Keyboard from <a href="./files/karshon_keyboard.zip" target="_blank">here</a>. Extract the downloaded karshon-keyboard.zip file and double click the setup.exe file to install the keyboard.</p>
+                            <p>Download Hendo Academy's Syriac Phonetic - Karshon Keyboard from <a
+                                    href="./files/karshon_keyboard.zip" target="_blank">here</a>. Extract the downloaded
+                                karshon-keyboard.zip file and double click the setup.exe file to install the keyboard.
+                            </p>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/karshon-keyboard-install.png" alt="Karshon keyboard installation">
+                                <img src="./images/karshon-typing/karshon-keyboard-install.png"
+                                    alt="Karshon keyboard installation">
                                 <div class="step-image-caption">Installing the Karshon keyboard</div>
                             </div>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/karshon-keyboard-install-success.png" alt="Karshon keyboard installation">
+                                <img src="./images/karshon-typing/karshon-keyboard-install-success.png"
+                                    alt="Karshon keyboard installation">
                                 <div class="step-image-caption">Installation successful</div>
                             </div>
                         </li>
-                        
+
                         <li>
                             <strong>Install Syriac Language Pack</strong>
-                            <p>Open Windows Settings, go to Time & Language, click on Language, click on "Add a Language", search for Syriac, and click Next to install.</p>
+                            <p>Open Windows Settings, go to Time & Language, click on Language, click on "Add a
+                                Language", search for Syriac, and click Next to install.</p>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/settings-language.png" alt="Adding Syriac language in Windows">
+                                <img src="./images/karshon-typing/settings-language.png"
+                                    alt="Adding Syriac language in Windows">
                                 <div class="step-image-caption">Click on "Add a Language"</div>
                             </div>
                             <div class="step-image">
@@ -640,16 +665,20 @@
                                 <div class="step-image-caption">Search for Syriac, click Next to install</div>
                             </div>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/post-installation.png" alt="Syriac language installed">
+                                <img src="./images/karshon-typing/post-installation.png"
+                                    alt="Syriac language installed">
                                 <div class="step-image-caption">Syriac language installed</div>
                             </div>
                         </li>
-                        
+
                         <li>
                             <strong>Configure Keyboard</strong>
-                            <p>Once the Syriac language pack is installed, click on the three dots next to the Syriac section and select "Language Options". In the options screen, click "Add a keyboard" and select "Syriac Phonetic - Karshon".</p>
+                            <p>Once the Syriac language pack is installed, click on the three dots next to the Syriac
+                                section and select "Language Options". In the options screen, click "Add a keyboard" and
+                                select "Syriac Phonetic - Karshon".</p>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/language-options-menu.png" alt="Configuring Karshon keyboard">
+                                <img src="./images/karshon-typing/language-options-menu.png"
+                                    alt="Configuring Karshon keyboard">
                                 <div class="step-image-caption">Adding Karshon keyboard in language options</div>
                             </div>
                             <div class="step-image">
@@ -661,62 +690,86 @@
                                 <div class="step-image-caption">Select "Syriac Phonetic - Karshon"</div>
                             </div>
                         </li>
-                        
+
                         <li>
-                            <strong>Install Karshon Font</strong>
-                            <p>Download the Karshon font from <a href="https://bethmardutho.org/malayalamgarshuni/" target="_blank">here</a>. Double-click the .ttf file to install it.</p>
-                            <div class="warning-box">
+                            <strong>Install a Karshon Font</strong>
+                            <p>Download the East Syriac Adiabene font with Karshon letters from <a
+                                    href="https://bethmardutho.org/malayalamgarshuni/" target="_blank">here</a>, or the
+                                East Syriac Malankara font from <a
+                                    href="/articles/hendo-academy-launches-kerala's-first-indigenous-east-syriac-and-karshon-unicode-font-east-syriac-malankara.html"
+                                    target="_blank">here</a>. Double-click the .ttf file to install it.</p>
+
+                            <div class="note-box">
                                 <strong>Important Notice:</strong>
-                                <p>The current version of the Karshon (Malayalam Garshuni) font available at Beth Mardutho's website is a preliminary release and may contain some limitations or display issues. We recommend waiting for the upcoming official release by Dr. George Kiraz of Beth Mardutho Institute, which will include comprehensive improvements and bug fixes. You may also use Hendo Academy's own Karshon font which will be released in the future</p>
+                                <p>The current version of the Karshon (Malayalam Garshuni) font available at Beth
+                                    Mardutho's website is a preliminary release and may contain some limitations or
+                                    display issues. We recommend waiting for the upcoming official release by Dr. George
+                                    Kiraz of Beth Mardutho Institute, which will include comprehensive improvements and
+                                    bug fixes. You may also use Hendo Academy's own East Syriac Malankara font as it is
+                                    a more authentic, indigenous, and fully featured Karshon font.</p>
                             </div>
-                            
+
                         </li>
                     </ol>
                 </div>
             </section>
-            
+
             <section class="article-section">
                 <h2 class="section-title">Using Karshon in LibreOffice Writer</h2>
                 <div class="section-content">
                     <ol class="step-list">
                         <li>
                             <strong>Set Input Language</strong>
-                            <p>Set Syriac and Syriac Phonetic - Karshon keyboard as the input language in Windows. Click the language icon in the taskbar and select the Syriac Phonetic - Karshon keyboard, or press Windows + Spacebar to switch between languages.</p>
+                            <p>Set Syriac and Syriac Phonetic - Karshon keyboard as the input language in Windows. Click
+                                the language icon in the taskbar and select the Syriac Phonetic - Karshon keyboard, or
+                                press Windows + Spacebar to switch between languages.</p>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/selected-language-keyboard.png" alt="Setting input language">
+                                <img src="./images/karshon-typing/selected-language-keyboard.png"
+                                    alt="Setting input language">
                                 <div class="step-image-caption">Selecting Karshon keyboard from language options</div>
                             </div>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/installed-keyboards.png" alt="Select Syriac Phonetic - Karshon keyboard">
+                                <img src="./images/karshon-typing/installed-keyboards.png"
+                                    alt="Select Syriac Phonetic - Karshon keyboard">
                                 <div class="step-image-caption">Select Syriac Phonetic - Karshon keyboard</div>
                             </div>
                         </li>
-                        
+
                         <li>
                             <strong>Configure LibreOffice Writer</strong>
-                            <p>Open LibreOffice Writer and select the Karshon font (or the East Syriac Adiabene font you installed earlier) from the font dropdown menu. If it is not available in the dropdown menu, please close the LibreOffice Writer and open it again.</p>
+                            <p>Open LibreOffice Writer and select the Karshon font (the East Syriac Adiabene font or the
+                                East Syriac Malankara font you installed earlier) from the font dropdown menu. If it is
+                                not available in the dropdown menu, please close the LibreOffice Writer and open it
+                                again.</p>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/select-karshon-font-libre-office.png" alt="Selecting Karshon font in LibreOffice">
+                                <img src="./images/karshon-typing/select-karshon-font-libre-office.png"
+                                    alt="Selecting Karshon font in LibreOffice">
                                 <div class="step-image-caption">Selecting Karshon font in LibreOffice Writer</div>
                             </div>
                         </li>
-                        
+
                         <li>
                             <strong>Enable Complex Text Layout</strong>
-                            <p>Go to Tools > Language > For All Text > More and check the "Complex Text Layout" checkbox. Select any version of Arabic in the dropdown menu (since Syriac is not available in the list, Arabic is the closest match).</p>
+                            <p>Go to Tools > Language > For All Text > More and check the "Complex Text Layout"
+                                checkbox. Select any version of Arabic in the dropdown menu (since Syriac is not
+                                available in the list, Arabic is the closest match).</p>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/language-selection-libreoffice-writer.png" alt="Change Language">
+                                <img src="./images/karshon-typing/language-selection-libreoffice-writer.png"
+                                    alt="Change Language">
                                 <div class="step-image-caption">Set Language</div>
                             </div>
                             <div class="step-image">
-                                <img src="./images/karshon-typing/complext-text-layout-language.png" alt="Enabling complex text layout">
-                                <div class="step-image-caption">Select any version of Arabic from the dropdown menu</div>
+                                <img src="./images/karshon-typing/complext-text-layout-language.png"
+                                    alt="Enabling complex text layout">
+                                <div class="step-image-caption">Select any version of Arabic from the dropdown menu
+                                </div>
                             </div>
                         </li>
-                        
+
                         <li>
                             <strong>Set Text Direction</strong>
-                            <p>Look for the text direction buttons on the right side of the top bar and select the right-to-left text direction option.</p>
+                            <p>Look for the text direction buttons on the right side of the top bar and select the
+                                right-to-left text direction option.</p>
                             <div class="step-image">
                                 <img src="./images/karshon-typing/rtl-select.png" alt="Setting text direction">
                                 <div class="step-image-caption">Setting right-to-left text direction</div>
@@ -724,40 +777,43 @@
                         </li>
                         <li>
                             <strong>That's it!</strong>
-                            <p>You should now be able to type in Karshon. If you encounter any issues, please refer to the troubleshooting section below.</p>
+                            <p>You should now be able to type in Karshon. If you encounter any issues, please refer to
+                                the troubleshooting section below.</p>
                             <div class="step-image">
                                 <img src="./images/karshon-typing/karshon-typing.gif" alt="Karshon typing">
                                 <div class="step-image-caption">കർശോൻ ടൈപ്പ് ചെയ്യാൻ ഇനി പറ്റും!</div>
                             </div>
                         </li>
                     </ol>
-                    
+
                     <div class="note-box">
-                        <p><strong>Note:</strong> When you start typing in Karshon, the document language should automatically change to Syriac-Turkiye (Syr-TR). You can verify this at the bottom of the page. You can change the document language by clicking on it.</p>
+                        <p><strong>Note:</strong> When you start typing in Karshon, the document language should
+                            automatically change to Syriac-Turkiye (Syr-TR). You can verify this at the bottom of the
+                            page. You can change the document language by clicking on it.</p>
                     </div>
                 </div>
             </section>
-            
+
             <section class="article-section">
                 <h2 class="section-title">Troubleshooting</h2>
                 <div class="section-content">
                     <ul class="step-list">
-                        <li>If you see Estangela letters instead of Karshon, make sure you've selected the Karshon font(or East Syriac Adiabene font your installed earlier) from the dropdown menu. You might need to do this a few times in the beginning.</li>
-                        <li>If the text direction is incorrect, ensure you've selected the right-to-left text direction option.</li>
-                        <li>If the keyboard isn't working, verify that you've installed both the Syriac language pack and the Karshon keyboard correctly.</li>
+                        <li>If you see Estangela letters instead of Karshon, make sure you've selected the Karshon
+                            font(or East Syriac Adiabene font your installed earlier) from the dropdown menu. You might
+                            need to do this a few times in the beginning.</li>
+                        <li>If the text direction is incorrect, ensure you've selected the right-to-left text direction
+                            option.</li>
+                        <li>If the keyboard isn't working, verify that you've installed both the Syriac language pack
+                            and the Karshon keyboard correctly.</li>
                         <li>If you face any issues, please make a comment below</li>
                     </ul>
                 </div>
             </section>
-            
-            <script src="https://utteranc.es/client.js"
-                    repo="gbinu42/hendoacademy"
-                    issue-term="pathname"
-                    theme="github-light"
-                    crossorigin="anonymous"
-                    async>
-            </script>
-            
+
+            <script src="https://utteranc.es/client.js" repo="gbinu42/hendoacademy" issue-term="pathname"
+                theme="github-light" crossorigin="anonymous" async>
+                </script>
+
             <a href="/articles" class="back-to-home">
                 <i class="fas fa-arrow-left"></i> Back to Articles
             </a>
@@ -768,7 +824,8 @@
         <div class="container footer-content">
             <div class="footer-section">
                 <h3>About Hendo Academy</h3>
-                <p>Dedicated to preserving and promoting the Syriac heritage of the Nasrani community through education, research, and digital resources.</p>
+                <p>Dedicated to preserving and promoting the Syriac heritage of the Nasrani community through education,
+                    research, and digital resources.</p>
             </div>
             <div class="footer-section">
                 <h3>Connect With Us</h3>
@@ -785,31 +842,33 @@
                 <p>Location: Kerala, India</p>
             </div>
         </div>
-        <div class="container" style="text-align: center; padding-top: 1rem; border-top: 1px solid #444; margin-top: 1rem;">
+        <div class="container"
+            style="text-align: center; padding-top: 1rem; border-top: 1px solid #444; margin-top: 1rem;">
             <p>&copy; 2023 Hendo Academy. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Mobile menu toggle
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             const navLinks = document.querySelector('.nav-links');
-            
+
             if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', function() {
+                mobileMenuBtn.addEventListener('click', function () {
                     navLinks.classList.toggle('active');
                 });
             }
-            
+
             // Close mobile menu when a link is clicked
             const navLinkItems = document.querySelectorAll('.nav-links a');
             navLinkItems.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     navLinks.classList.remove('active');
                 });
             });
         });
     </script>
 </body>
+
 </html>

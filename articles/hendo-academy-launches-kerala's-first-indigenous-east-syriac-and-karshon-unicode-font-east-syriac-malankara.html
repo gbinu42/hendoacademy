@@ -66,6 +66,13 @@
             font-style: normal;
         }
 
+        @font-face {
+            font-family: 'EastSyriacMalankaraClassical';
+            src: url('../assets/fonts/EastSyriacMalankaraClassical.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         :root {
             --primary-color: #8a3c3c;
             --secondary-color: #d4a445;
@@ -451,6 +458,39 @@
                 font-size: 1.5rem;
             }
         }
+
+        /* Add these styles in the existing style section */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            cursor: pointer;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 4px;
+        }
+
+        .sample-image {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .sample-image:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 
@@ -497,38 +537,76 @@
                 <p>Below is the complete character set for the East Syriac Malankara font, showcasing its unique design
                     features and full Unicode support:</p>
 
-                <div
-                    style="margin: 2rem auto; padding: 1.5rem; background-color: var(--light-bg); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 800px;">
-                    <h3 style="color: var(--tertiary-color); margin-bottom: 1rem; text-align: center;">Character Set
-                    </h3>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 2rem 0;">
+                    <div
+                        style="flex: 1; min-width: 300px; padding: 1.5rem; background-color: var(--light-bg); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h3 style="color: var(--tertiary-color); margin-bottom: 1rem; text-align: center;">Modern
+                            Version Character Set</h3>
 
-                    <div style="margin-bottom: 1.5rem; text-align: center;">
-                        <h4 style="margin-bottom: 0.5rem;">Syriac Characters</h4>
-                        <p
-                            style="font-family: 'EastSyriacMalankara'; font-size: 2rem; direction: rtl; line-height: 1.5; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
-                            ܐ ܒ ܓ ܕ ܗ ܘ ܙ ܚ ܛ ܝ ܟ ܠ ܡ ܢ ܣ ܥ ܦ ܨ ܩ ܪ ܫ ܬ ܑ ܞ
-                        </p>
+                        <div style="margin-bottom: 1.5rem; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem;">Syriac Characters</h4>
+                            <p
+                                style="font-family: 'EastSyriacMalankara'; font-size: 2rem; direction: rtl; line-height: 1.5; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
+                                ܐ ܒ ܓ ܕ ܗ ܘ ܙ ܚ ܛ ܝ ܟܟ ܟ ܠ ܡܡ ܢܢ ܢ ܣ ܥ ܦ ܨ ܩ ܪ ܫ ܬ ܑ ܞ
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem;">Karshon Malayalam Characters</h4>
+                            <p
+                                style="font-family: 'EastSyriacMalankara'; font-size: 2rem; direction: rtl; line-height: 1.5; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
+                                ࡠ ࡡ ࡢ ࡣ ࡤ ࡥ ࡦ ࡧ ࡨ ࡩ ࡪ
+                            </p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem;">East Syriac Cross</h4>
+                            <p
+                                style="font-family: 'EastSyriacMalankara'; font-size: 2rem; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px; display: inline-block; min-width: 80px;">
+                                ♱
+                            </p>
+                        </div>
+
+                        <p style="margin-top: 1.5rem; text-align: center; font-style: italic; color: #666;">The East
+                            Syriac
+                            Malankara font includes all standard Syriac characters plus specialized Karshon glyphs for
+                            writing Malayalam in the Syriac script.</p>
                     </div>
 
-                    <div style="margin-bottom: 1.5rem; text-align: center;">
-                        <h4 style="margin-bottom: 0.5rem;">Karshon Malayalam Characters</h4>
-                        <p
-                            style="font-family: 'EastSyriacMalankara'; font-size: 2rem; direction: rtl; line-height: 1.5; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
-                            ࡠ ࡡ ࡢ ࡣ ࡤ ࡥ ࡦ ࡧ ࡨ ࡩ ࡪ
-                        </p>
-                    </div>
+                    <div
+                        style="flex: 1; min-width: 300px; padding: 1.5rem; background-color: var(--light-bg); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h3 style="color: var(--tertiary-color); margin-bottom: 1rem; text-align: center;">Classical
+                            Version Character Set</h3>
 
-                    <div style="text-align: center;">
-                        <h4 style="margin-bottom: 0.5rem;">East Syriac Cross</h4>
-                        <p
-                            style="font-family: 'EastSyriacMalankara'; font-size: 2rem; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px; display: inline-block; min-width: 80px;">
-                            ♱
-                        </p>
-                    </div>
+                        <div style="margin-bottom: 1.5rem; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem;">Syriac Characters</h4>
+                            <p
+                                style="font-family: 'EastSyriacMalankaraClassical'; font-size: 2rem; direction: rtl; line-height: 1.5; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
+                                ܐ ܒ ܓ ܕ ܗ ܘ ܙ ܚ ܛ ܝ ܟܟ ܠ ܡܡ ܢܢ ܢ ܣ ܥ ܦ ܨ ܩ ܪ ܫ ܬ ܑ ܞ
+                            </p>
+                        </div>
 
-                    <p style="margin-top: 1.5rem; text-align: center; font-style: italic; color: #666;">The East Syriac
-                        Malankara font includes all standard Syriac characters plus specialized Karshon glyphs for
-                        writing Malayalam in the Syriac script.</p>
+                        <div style="margin-bottom: 1.5rem; text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem;">Karshon Malayalam Characters</h4>
+                            <p
+                                style="font-family: 'EastSyriacMalankaraClassical'; font-size: 2rem; direction: rtl; line-height: 1.5; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
+                                ࡠ ࡡ ࡢ ࡣ ࡤ ࡥ ࡦ ࡧ ࡨ ࡩ ࡪ
+                            </p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <h4 style="margin-bottom: 0.5rem;">East Syriac Cross</h4>
+                            <p
+                                style="font-family: 'EastSyriacMalankaraClassical'; font-size: 2rem; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px; display: inline-block; min-width: 80px;">
+                                ♱
+                            </p>
+                        </div>
+
+                        <p style="margin-top: 1.5rem; text-align: center; font-style: italic; color: #666;">The East
+                            Syriac
+                            Malankara Classical font preserves the authentic calligraphic style from the Vedatharkam
+                            manuscript, including all standard Syriac characters and Karshon glyphs.</p>
+                    </div>
                 </div>
             </section>
 
@@ -568,7 +646,8 @@
                     </div>
                     <div class="font-variant">
                         <h3>"East Syriac Malankara Classical"</h3>
-                        <p>A faithful reproduction of the original Vedatharkam manuscript's calligraphy, retaining its
+                        <p>A faithful reproduction of the original Vedatharkam manuscript's calligraphy, with more
+                            authentic vowel shapes, retaining its
                             historic charm for academic and ceremonial purposes. Ideal for scholars and those seeking an
                             unaltered connection to India's manuscript tradition.</p>
                     </div>
@@ -607,8 +686,8 @@
                     <li>Zain (ܙ) appears in a distinctive looped form</li>
                     <li>Ae (ܥ) is angled differently from standard East Syriac</li>
                     <li>Ṣāḏē (ܨ) features a uniquely curved structure</li>
-                    <li>Waw (ܘ) in the original manuscript joins letters on the left side, though Unicode shaping
-                        limitations prevent full replication in the digital font</li>
+                    <li>Waw (ܘ), He (ܗ), and Taw (ܬ) in the original manuscript join letters on both sides, though
+                        Unicode shaping limitations prevent full replication in the digital font</li>
                 </ul>
 
                 <div
@@ -688,16 +767,39 @@
                     <h3 style="color: var(--tertiary-color); margin-bottom: 1rem;">Classical Syriac Samples</h3>
 
                     <div style="margin-bottom: 2rem;">
-                        <img src="./images/east-syriac-malankara/slotha.jpg" alt="East Syriac text sample"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
-                        <p
-                            style="text-align: center; font-style: italic; margin-top: 0.5rem; margin-bottom: 2rem; color: #666;">
-                            Classical East Syriac prayer text</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <img src="./images/east-syriac-malankara/slotha.jpg" alt="East Syriac text sample"
+                                    class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Modern version - Classical East Syriac prayer text</p>
+                            </div>
+                            <div>
+                                <img src="./images/east-syriac-malankara/slotha_classical.jpg"
+                                    alt="East Syriac text sample classical" class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Classical version - Classical East Syriac prayer text</p>
+                            </div>
+                        </div>
 
-                        <img src="./images/east-syriac-malankara/breek_hannana.jpg" alt="East Syriac liturgical text"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
-                        <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">East Syriac
-                            liturgical hymn Breek Hannana</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <img src="./images/east-syriac-malankara/breek_hannana.jpg"
+                                    alt="East Syriac liturgical text" class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Modern version - East Syriac liturgical hymn Breek Hannana</p>
+                            </div>
+                            <div>
+                                <img src="./images/east-syriac-malankara/breek_hannana_classical.jpg"
+                                    alt="East Syriac liturgical text classical" class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Classical version - East Syriac liturgical hymn Breek Hannana</p>
+                            </div>
+                        </div>
                     </div>
 
                     <h3 style="color: var(--tertiary-color); margin-bottom: 1rem;">Karshon (Suriyani Malayalam/
@@ -705,17 +807,39 @@
                     </h3>
 
                     <div>
-                        <img src="./images/east-syriac-malankara/vedatharkam_page-0001.jpg"
-                            alt="Karshon Malayalam text sample"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
-                        <p
-                            style="text-align: center; font-style: italic; margin-top: 0.5rem; margin-bottom: 2rem; color: #666;">
-                            Font vs Manuscript comparison</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <img src="./images/east-syriac-malankara/vedatharkam.jpg"
+                                    alt="Karshon Malayalam text sample" class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Modern version - Font vs Manuscript comparison</p>
+                            </div>
+                            <div>
+                                <img src="./images/east-syriac-malankara/vedatharkam_classical.jpg"
+                                    alt="Karshon Malayalam text sample classical" class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Classical version - Font vs Manuscript comparison</p>
+                            </div>
+                        </div>
 
-                        <img src="./images/east-syriac-malankara/parishudhatmave.jpg" alt="Karshon modern text example"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
-                        <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">Karshon
-                            rendering of Parishudhatmave nee ezhunnalli - a popular hymn by Fr. Abel</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <img src="./images/east-syriac-malankara/parishudhatmave.jpg"
+                                    alt="Karshon modern text example" class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Modern version - Karshon rendering of Parishudhatmave nee ezhunnalli</p>
+                            </div>
+                            <div>
+                                <img src="./images/east-syriac-malankara/parishudhatmave_classical.jpg"
+                                    alt="Karshon classical text example" class="sample-image"
+                                    style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #f0f0f0; padding: 10px;">
+                                <p style="text-align: center; font-style: italic; margin-top: 0.5rem; color: #666;">
+                                    Classical version - Karshon rendering of Parishudhatmave nee ezhunnalli</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -813,15 +937,17 @@
                                     purposes.</td>
                                 <td style="padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: center;">
                                     <div
-                                        style="display: inline-flex; align-items: center; font-size: 0.9rem; color: #c77700;">
+                                        style="display: inline-flex; align-items: center; font-size: 0.9rem; color: #2e7d32;">
                                         <div
-                                            style="width: 8px; height: 8px; background-color: #c77700; border-radius: 50%; margin-right: 6px;">
+                                            style="width: 8px; height: 8px; background-color: #2e7d32; border-radius: 50%; margin-right: 6px;">
                                         </div>
-                                        In Development
+                                        Released
                                     </div>
                                 </td>
-                                <td style="padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: center;"><span
-                                        style="color: #666;">Expected 2025</span></td>
+                                <td style="padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: center;"><a
+                                        href="/assets/zip/EastSyriacMalankaraClassical.zip"
+                                        style="display: inline-block; padding: 6px 12px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background-color 0.3s;"><i
+                                            class="fas fa-download" style="margin-right: 5px;"></i>Download</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -922,6 +1048,10 @@
         </div>
     </footer>
 
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Zoomed image">
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Mobile menu toggle
@@ -941,6 +1071,35 @@
                     navLinks.classList.remove('active');
                 });
             });
+
+            // Add click handlers for sample images
+            const sampleImages = document.querySelectorAll('.sample-image');
+            sampleImages.forEach(img => {
+                img.addEventListener('click', function () {
+                    openLightbox(this.src);
+                });
+            });
+        });
+
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
         });
     </script>
 </body>
