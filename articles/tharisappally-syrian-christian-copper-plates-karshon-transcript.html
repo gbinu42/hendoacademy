@@ -482,6 +482,31 @@
             background-color: #6b2f2f;
         }
 
+        .external-link-note {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .external-link-note a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .external-link-note a:hover {
+            text-decoration: underline;
+        }
+
+        .external-link-note i {
+            margin-right: 0.5rem;
+            color: var(--secondary-color);
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .nav-brand-text {
@@ -723,6 +748,13 @@
                         Vattezhuth inscriptions into Karshon Malayalam. This transcription was meticulously prepared by
                         Josekutty Abraham, Binu George, and Lulu Mathews of Hendo Academy in 2024, offering new access
                         to this vital historical document.</p>
+
+                    <p class="external-link-note">
+                        <i class="fas fa-external-link-alt"></i> You can also visit
+                        <a href="https://hudra.day/books/tharisappally-syrian-christian-copper-plates-karshon-transcript"
+                            target="_blank" rel="noopener noreferrer">hudra.day</a>
+                        to see higher quality images of the manuscript.
+                    </p>
 
                     <div class="font-selector-container">
                         <label for="syriac-font-selector" class="font-selector-label">Select Syriac Font:</label>
