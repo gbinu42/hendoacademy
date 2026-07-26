@@ -1,0 +1,635 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "Karshon";
+  src: url("/assets/fonts/Karshon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "East Syriac Malankara";
+  src: url("/assets/fonts/EastSyriacMalankara.ttf?v=2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Legacy family name used in older article markup */
+@font-face {
+  font-family: "EastSyriacMalankara";
+  src: url("/assets/fonts/EastSyriacMalankara.ttf?v=2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "East Syriac Malankara Classical";
+  src: url("/assets/fonts/EastSyriacMalankaraClassical.ttf?v=2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EastSyriacMalankaraClassical";
+  src: url("/assets/fonts/EastSyriacMalankaraClassical.ttf?v=2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "East Syriac Adiabene";
+  src: url("/assets/fonts/SyrCOMAdiabene.ttf?v=8") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), "Source Serif 4", ui-serif, Georgia, serif;
+  --font-display: var(--font-fraunces), "Fraunces", ui-serif, Georgia, serif;
+  --font-malayalam: var(--font-noto-malayalam), "Noto Sans Malayalam", sans-serif;
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --font-karshon: "East Syriac Adiabene", "Karshon", serif;
+  --color-brand: var(--brand);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-light: var(--brand-light);
+  --color-brand-dark: var(--brand-dark);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --brand: #8a3c3c;
+  --brand-gold: #d4a445;
+  --brand-blue: #3c5c8a;
+  --brand-light: #f8f5f0;
+  --brand-dark: #2b2620;
+  /* Legacy article CSS aliases */
+  --primary-color: var(--brand);
+  --secondary-color: var(--brand-gold);
+  --tertiary-color: var(--brand-blue);
+  --light-bg: var(--brand-light);
+  --text-color: #2a2622;
+  --background: #ffffff;
+  --foreground: #333333;
+  --card: #ffffff;
+  --card-foreground: #333333;
+  --popover: #ffffff;
+  --popover-foreground: #333333;
+  --primary: #8a3c3c;
+  --primary-foreground: #ffffff;
+  --secondary: #d4a445;
+  --secondary-foreground: #2b2620;
+  --muted: #f8f5f0;
+  --muted-foreground: #666666;
+  --accent: #f8f5f0;
+  --accent-foreground: #2b2620;
+  --destructive: #8a3c3c;
+  --border: #e5e0d8;
+  --input: #e5e0d8;
+  --ring: #8a3c3c;
+  --chart-1: #8a3c3c;
+  --chart-2: #d4a445;
+  --chart-3: #3c5c8a;
+  --chart-4: #2b2620;
+  --chart-5: #f8f5f0;
+  --radius: 0.375rem;
+  --sidebar: #2b2620;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #8a3c3c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3c332c;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #3c332c;
+  --sidebar-ring: #d4a445;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}
+
+.container-site {
+  @apply mx-auto w-full max-w-[1200px] px-5;
+}
+
+/* Default Syriac face (Adiabene). Articles may override with Malankara etc.
+   Do NOT force init/medi/fina - the shaper applies those by glyph position;
+   enabling them globally breaks joining. Match syr app feature set. */
+.syriac,
+.syriac-title,
+.syriac-text,
+.syriac-header,
+.syriac-quote,
+.syriac-char {
+  font-family: "East Syriac Adiabene", "Karshon", serif;
+  direction: rtl;
+  font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "ccmp" 1, "locl" 1,
+    "mark" 1, "mkmk" 1;
+  font-variant-ligatures: common-ligatures contextual;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "ccmp" 1,
+    "locl" 1, "mark" 1, "mkmk" 1;
+  -moz-font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "ccmp" 1, "locl" 1,
+    "mark" 1, "mkmk" 1;
+  unicode-bidi: isolate;
+}
+
+/* Karshon / Suriyani Malayalam tables - Malankara has the dedicated glyphs */
+.suriyani-letter,
+.suriyani-example {
+  font-family: "East Syriac Malankara", "East Syriac Adiabene", "Karshon", serif;
+  direction: rtl;
+  font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "ccmp" 1, "locl" 1,
+    "mark" 1, "mkmk" 1;
+  font-variant-ligatures: common-ligatures contextual;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "ccmp" 1,
+    "locl" 1, "mark" 1, "mkmk" 1;
+  unicode-bidi: isolate;
+}
+
+/* Keep shaping on article Syriac; do NOT force a family (Malankara selector must win) */
+.article-body .syriac,
+.article-body .syriac-title,
+.article-body .syriac-text,
+.article-body .syriac-header,
+.article-body .syriac-quote,
+.article-body .syriac-char,
+.article-body .suriyani-letter,
+.article-body .suriyani-example,
+.article-content .syriac,
+.article-content .syriac-title,
+.article-content .syriac-text,
+.article-content .syriac-header,
+.article-content .syriac-quote,
+.article-content .syriac-char,
+.article-content .suriyani-letter,
+.article-content .suriyani-example {
+  font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "ccmp" 1, "locl" 1,
+    "mark" 1, "mkmk" 1 !important;
+  -webkit-font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "ccmp" 1,
+    "locl" 1, "mark" 1, "mkmk" 1 !important;
+  unicode-bidi: isolate;
+}
+
+.article-body .parallel-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.article-body .parallel-text .syriac-text,
+.article-body .parallel-text .malayalam-text {
+  padding: 1.15rem 1.25rem;
+  background: #fff;
+  border: 1px solid rgba(138, 60, 60, 0.12);
+  border-radius: 0.35rem;
+  box-shadow: 0 2px 10px rgba(43, 38, 32, 0.04);
+}
+
+.article-body .syriac-text {
+  font-size: 1rem;
+  line-height: 2;
+  text-align: right;
+}
+
+.article-body .malayalam-text {
+  font-family: var(--font-malayalam);
+  line-height: 1.9;
+}
+
+.article-body .font-selector {
+  margin: 1.75rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.article-body .font-selector select {
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  background: white;
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-sans);
+}
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.article-body a {
+  color: var(--brand);
+  text-underline-offset: 0.15em;
+}
+
+.article-body a:hover {
+  color: var(--brand-blue);
+}
+
+@media (max-width: 768px) {
+  .article-body .parallel-text {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Article reading layout --- */
+.article-page {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212, 164, 69, 0.12), transparent),
+    var(--brand-light);
+}
+
+.article-sheet {
+  background: #fffefb;
+  border: 1px solid rgba(138, 60, 60, 0.1);
+  box-shadow: 0 12px 40px rgba(43, 38, 32, 0.06);
+  overflow-x: clip;
+}
+
+.article-content {
+  font-family: var(--font-serif);
+  color: #2a2622;
+  font-size: 0.875rem;
+  line-height: 1.715;
+}
+
+.article-content .english-title,
+.article-content .article-title,
+.article-content h1.article-title,
+.article-shell-title {
+  font-family: var(--font-display) !important;
+  font-weight: 600;
+  color: var(--brand);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-size: clamp(1.55rem, 3.5vw, 2.25rem) !important;
+  margin-bottom: 0.35rem;
+}
+
+.article-content p,
+.article-content .article-section p,
+.article-content .subtitle,
+.article-content .primary-subtitle,
+.article-content .attribution-subtitle {
+  font-family: var(--font-serif);
+}
+
+/* Syriac / Karshon must beat article serif - including inline-styled maps */
+.article-content .syriac,
+.article-content .syriac-title,
+.article-content .syriac-text,
+.article-content .syriac-header,
+.article-content .syriac-quote,
+.article-content .syriac-char,
+.article-content .suriyani-letter,
+.article-content .suriyani-example,
+.article-content .malayalam-text,
+.article-content .malayalam-text p {
+  font-family: inherit;
+}
+
+.article-content .syriac,
+.article-content .syriac-title,
+.article-content .syriac-text,
+.article-content .syriac-header,
+.article-content .syriac-quote,
+.article-content .syriac-char,
+.article-content .syriac-sample {
+  font-family: "East Syriac Adiabene", "Karshon", serif;
+}
+
+.article-content .suriyani-letter,
+.article-content .suriyani-example {
+  font-family: "East Syriac Malankara", "East Syriac Adiabene", "Karshon", serif;
+}
+
+.article-content .malayalam-text,
+.article-content .malayalam-text p {
+  font-family: var(--font-malayalam);
+}
+
+.article-content .article-section-title,
+.article-content h2,
+.article-content h3.article-section-title,
+.article-content .section-title {
+  font-family: var(--font-display) !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brand);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.article-content .syriac-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem) !important;
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--brand-dark);
+  line-height: 2;
+}
+
+.article-content .syriac-text,
+.article-content .syriac-char {
+  font-size: 1.15rem;
+  line-height: 2;
+}
+
+.article-content .subtitle,
+.article-content .primary-subtitle,
+.article-content .attribution-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #4a4540;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-content .article-header,
+.article-content header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid rgba(138, 60, 60, 0.12);
+  background: transparent;
+}
+
+/* Legacy article chrome - shell already provides nav / sheet */
+.article-content .back-to-home {
+  display: none !important;
+}
+
+.article-content i.fas,
+.article-content i.fa,
+.article-content i.far,
+.article-content i.fab {
+  display: none;
+}
+
+.article-content .article-header .english-title::after,
+.article-content .article-header .article-title::after {
+  display: none;
+}
+
+.article-content .article-meta,
+.article-content .article-meta span {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: #6b6460;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.article-content .subtitle,
+.article-content .primary-subtitle,
+.article-content .attribution-subtitle {
+  font-family: var(--font-serif);
+}
+
+.article-content .attribution-subtitle {
+  font-style: italic;
+  color: #5c5650;
+}
+
+.article-content .featured-image,
+.article-content .article-image,
+.article-content img.featured-image {
+  display: block;
+  width: 100%;
+  margin: 1.75rem auto;
+  border-radius: 0.35rem;
+  box-shadow: 0 8px 24px rgba(43, 38, 32, 0.1);
+}
+
+.article-content .article-image-caption,
+.article-content .article-image-container .article-image-caption {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: #6b6460;
+  text-align: center;
+  margin-top: 0.65rem;
+  line-height: 1.5;
+}
+
+.article-content .article-section {
+  margin: 2.25rem 0;
+}
+
+.article-content p {
+  margin: 0 0 1.25rem;
+  max-width: 42rem;
+}
+
+.article-content .article-body > p,
+.article-content .article-section > p {
+  max-width: none;
+}
+
+.article-content .malayalam-text,
+.article-content .malayalam-text p {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.article-content .syriac-quote {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  background: rgba(138, 60, 60, 0.05);
+  border-left: 3px solid var(--brand-gold);
+  border-radius: 0 0.35rem 0.35rem 0;
+}
+
+.article-content .author-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 9999px;
+  margin: 1.25rem auto;
+  display: block;
+  box-shadow: 0 4px 16px rgba(43, 38, 32, 0.12);
+}
+
+.article-content .purpose-list,
+.article-content ol,
+.article-content ul {
+  font-family: var(--font-serif);
+  margin: 1rem 0 1.5rem 1.25rem;
+  line-height: 1.75;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content .back-to-home {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+.article-content .back-to-home:hover {
+  color: var(--brand-blue);
+}
+
+/* Zoomable article images + lightbox */
+.article-content img.article-zoomable,
+.article-content .article-body img {
+  cursor: zoom-in;
+}
+
+.article-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(20, 16, 12, 0.88);
+  backdrop-filter: blur(4px);
+  cursor: zoom-out;
+  animation: article-lightbox-in 0.18s ease-out;
+}
+
+@keyframes article-lightbox-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.article-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.article-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.article-lightbox-figure {
+  margin: 0;
+  max-width: min(1100px, 100%);
+  max-height: calc(100vh - 2.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: default;
+}
+
+.article-lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 5.5rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.35rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  cursor: default;
+}
+
+.article-lightbox-caption {
+  max-width: 40rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.article-nav-links {
+  font-family: var(--font-sans);
+}

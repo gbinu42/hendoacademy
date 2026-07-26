@@ -1,35 +1,31 @@
 ---
-description: 
-globs: 
+description: Hendo Academy website structure (Next.js static export)
+globs:
 alwaysApply: false
 ---
 # Hendo Academy Website Structure
 
 ## Overview
-The Hendo Academy website is focused on promoting the study of Syriac and the history of Nasranies of India. The site contains educational content, articles, and tools for learning Syriac.
+The Hendo Academy website is a Next.js App Router site (`output: 'export'`) hosted on GitHub Pages. It promotes the study of Syriac and the history of Nasranies of India.
 
-## Main Pages
-- [index.html](mdc:index.html) - Main homepage with sections for About, Activities, Syriac Editor, Articles and Contact
-- [articles/index.html](mdc:articles/index.html) - Articles index page listing all available articles
+## Main routes
+- [`app/page.tsx`](mdc:app/page.tsx) — Home (`/`) with About, Activities, Articles, Books, Editor, Videos, Contact
+- [`app/articles/page.tsx`](mdc:app/articles/page.tsx) — Articles index (`/articles/`)
+- [`app/editor/page.tsx`](mdc:app/editor/page.tsx) — Syriac Editor iframe (`/editor/`)
+- [`app/books/*/page.tsx`](mdc:app/books) — Book iframe pages
 
 ## Articles
-- [articles/turgama.html](mdc:articles/turgama.html) - Article featuring parallel Syriac and Malayalam text of the Turgama d'evangelion (a liturgical text)
+Article pages live under `app/articles/<slug>/page.tsx`. Metadata for the index is in [`lib/articles.ts`](mdc:lib/articles.ts).
 
-## Styling and Components
-The website uses a consistent styling approach with:
-- Responsive design (mobile and desktop layouts)
-- Color scheme with primary (#8a3c3c), secondary (#d4a445), and tertiary (#3c5c8a) colors
-- Custom Syriac font (Karshon) for displaying Syriac text
-- Parallel text display components for showing Syriac and Malayalam translations side by side
+## Styling
+- Tailwind CSS + shadcn/ui
+- Brand colors: primary `#8a3c3c`, secondary `#d4a445`, tertiary `#3c5c8a`
+- Karshon and East Syriac fonts under `/assets/fonts/`
+- Use `.syriac` / `SyriacText` for Syriac text
 
-## Features
-- Navigation menu with mobile-responsive toggle
-- Article layouts with metadata (author, date)
-- Social media integration in footer
-- Google Analytics integration
-
-## Technical Notes
-- Uses jQuery for DOM manipulation
-- Custom fonts for Syriac text rendering
-- Mobile-first responsive design with CSS media queries
-- Never add .html to hrefs and other links
+## Technical notes
+- Static export for GitHub Pages; deploy via `.github/workflows/deploy.yml`
+- Never add `.html` to hrefs and other links — use extensionless Next.js paths (e.g. `/articles/turgama`)
+- `trailingSlash: false` so GitHub Pages URLs match the legacy site
+- Shared chrome: `SiteHeader`, `SiteFooter`, `Analytics`, `Utterances`
+- Static assets live in `public/` and keep their public URL paths

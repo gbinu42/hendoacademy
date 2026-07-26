@@ -1,0 +1,570 @@
+import type { Metadata } from "next";
+import { ArticleShell } from "@/components/article-shell";
+import { getArticle } from "@/lib/articles";
+
+const slug = "typing-karshon-in-libreoffice-writer-on-macos";
+const meta = getArticle(slug) ?? {
+  slug,
+  title: "Typing Karshon in LibreOffice Writer on macOS",
+  description: "A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on macOS",
+  author: "Hendo Academy",
+  date: "",
+  excerpt: "A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on macOS",
+  listed: false,
+  hasComments: true,
+};
+
+export const metadata: Metadata = {
+  title: "Typing Karshon in LibreOffice Writer on macOS",
+  description: "A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on macOS",
+  openGraph: {
+    type: "article",
+    url: `https://www.hendoacademy.org/articles/${slug}`,
+    title: "Typing Karshon in LibreOffice Writer on macOS",
+    description: "A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on macOS",
+    images: ["/assets/images/logo.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Typing Karshon in LibreOffice Writer on macOS",
+    description: "A step-by-step guide to type Karshon (Suriyani Malayalam) in LibreOffice Writer on macOS",
+    images: ["/assets/images/logo.jpg"],
+  },
+  alternates: {
+    canonical: `https://www.hendoacademy.org/articles/${slug}`,
+  },
+};
+
+const html = `<header class="article-header">
+                <h1 class="article-title">Typing Karshon in LibreOffice Writer on macOS</h1>
+                <div class="article-meta">
+                    <span>Binu George</span>
+                    <span>April 30, 2025</span>
+                </div>
+            </header>
+
+            <section class="article-section">
+                <h2 class="section-title">Related Articles</h2>
+                <div class="section-content">
+                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                        <li style="margin-bottom: 1rem;">
+                            <a href="/articles/typing-karshon-in-libreoffice-writer-on-windows"
+                                style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-block; padding: 0.5rem 1rem; background-color: var(--light-bg); border-radius: 4px; transition: background-color 0.3s;">
+                                Typing Karshon in LibreOffice Writer on Windows
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="/articles/syriac-phonetic-karshon-keyboard-layout-and-usage"
+                                style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-block; padding: 0.5rem 1rem; background-color: var(--light-bg); border-radius: 4px; transition: background-color 0.3s;">
+                                Karshon Keyboard Layout Guide
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="section-content">
+                    <p>This guide will walk you through the process of setting up and using Karshon (Suriyani Malayalam)
+                        typing in LibreOffice Writer on macOS. While Microsoft Word is a popular word processor, it
+                        currently lacks full support for typing Karshon, making LibreOffice Writer the recommended
+                        choice for this purpose. Follow these steps carefully to ensure proper functionality.</p>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-title">Prerequisites</h2>
+                <div class="section-content">
+                    <p>Before you begin, make sure you have the following:</p>
+                    <ul class="step-list">
+                        <li>macOS 15 Sequoia operating system (not tested on other versions, but a similar process
+                            should work)</li>
+                        <li>Administrator access to install software and fonts</li>
+                        <li>Internet connection to download required files</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-title">Installation Steps</h2>
+                <div class="section-content">
+                    <ol class="step-list">
+                        <li>
+                            <strong>Install LibreOffice</strong>
+                            <p>Download and install the latest version of LibreOffice from the official website: <a
+                                    href="https://www.libreoffice.org/download/download-libreoffice/"
+                                    target="_blank">https://www.libreoffice.org/download/download-libreoffice/</a>.
+                                Double click the .dmg file to install it, you might also have to drag the LibreOffice
+                                icon to the Applications folder.</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/libreoffice-installation.png"
+                                    alt="LibreOffice Download Page">
+                                <div class="step-image-caption">Drag the LibreOffice icon to the Applications folder
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Install Karshon Keyboard Layout</strong>
+                            <p>Download the "Syriac Phonetic - Karshon" keyboard layout from <a
+                                    href="/articles/files/SyriacKarshon.keylayout" target="_blank">here</a>. Open
+                                Finder, click on "Go" in the menu bar, and press the ⌥ (option) key to open the
+                                "Library" folder. Navigate to "Keyboard Layouts" folder in Library, and copy/drag the
+                                "SyriacKarshon.keylayout" file you downloaded earlier into this folder.</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/opening-library-folder.png"
+                                    alt="Opening Library Folder in Finder with option key pressed">
+                                <div class="step-image-caption">Opening the Library folder in Finder with ⌥ (option) key
+                                    pressed</div>
+                            </div>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/keyboard-layouts-folder.png"
+                                    alt="Keyboard Layouts Folder">
+                                <div class="step-image-caption">Keyboard Layouts folder location</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Configure Keyboard Layout</strong>
+                            <p>Reboot your Mac. Once it boots up, go to System Settings > Keyboard > Input Sources >
+                                Edit. Click on the "+" button to add a new keyboard layout. Scroll down to the bottom of
+                                the list and click on "Others". Select the "SyriacKarshon" layout and add it. Make sure
+                                that it shows up in the list of input sources and that "Show input menu in menu bar" is
+                                checked.</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/input-sources-edit-button.png"
+                                    alt="System Settings Keyboard Section">
+                                <div class="step-image-caption">System Settings Keyboard section - input source edit
+                                </div>
+                            </div>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/add-input-source.png"
+                                    alt="Input Sources Configuration">
+                                <div class="step-image-caption">Adding new input source</div>
+                            </div>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/add-syriackarshon-input-source.png"
+                                    alt="SyriacKarshon Layout Selection">
+                                <div class="step-image-caption">Selecting SyriacKarshon layout</div>
+                            </div>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/enable-show-input-menu.png"
+                                    alt="Enable Show Input Menu">
+                                <div class="step-image-caption">Enable "Show input menu in menu bar"</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Install a Karshon Font</strong>
+                            <p>Download the East Syriac Adiabene font with Karshon letters font from <a
+                                    href="https://bethmardutho.org/malayalamgarshuni/" target="_blank">here</a>, or the
+                                East Syriac Malankara font from <a
+                                    href="/articles/hendo-academy-launches-kerala's-first-indigenous-east-syriac-and-karshon-unicode-font-east-syriac-malankara.html"
+                                    target="_blank">here</a>. Double-click the .ttf file to install it.</p>
+
+                            <div class="note-box">
+                                <strong>Important Notice:</strong>
+                                <p>The current version of the Karshon (Malayalam Garshuni) font available at Beth
+                                    Mardutho's website is a preliminary release and may contain some limitations or
+                                    display issues. We recommend waiting for the upcoming official release by Dr. George
+                                    Kiraz of Beth Mardutho Institute, which will include comprehensive improvements and
+                                    bug fixes. You may also use Hendo Academy's own East Syriac Malankara font as it is
+                                    a more authentic, indigenous, and fully featured Karshon font.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-title">Using Karshon in LibreOffice Writer</h2>
+                <div class="section-content">
+                    <ol class="step-list">
+                        <li>
+                            <strong>Set Input Language</strong>
+                            <p>You can now switch between languages using the input menu in the menu bar (top right
+                                corner of your screen). If "SyriacKarshon" does not show up in the list of input
+                                sources, click "Show Keyboard Viewer". If it still does not show up, please reboot your
+                                Mac again. Select it from the list of input sources.</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/input-sources-not-shown.png"
+                                    alt="Input Menu in Menu Bar">
+                                <div class="step-image-caption">Input menu not showing sources. Click "Show Keyboard
+                                    Viewer" to see the list of input sources.</div>
+                            </div>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/input-menu-correct.png"
+                                    alt="SyriacKarshon in Input Menu">
+                                <div class="step-image-caption"> Both input sources shown. Select SyriacKarshon from the
+                                    list of input sources</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Configure LibreOffice Writer</strong>
+                            <p>Open LibreOffice Writer and select the Karshon font (the East Syriac Adiabene font or the
+                                East Syriac Malankara font you installed earlier) from the font dropdown menu. If it is
+                                not available in the dropdown menu, please close the LibreOffice Writer and open it
+                                again.</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/font-selection-libreoffice-writer.png"
+                                    alt="Font Selection in LibreOffice">
+                                <div class="step-image-caption">Selecting Karshon font in LibreOffice Writer</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <strong>Enable Complex Text Layout</strong>
+                            <p>Go to Tools > Language > For All Text > More and check the "Complex Text Layout"
+                                checkbox. Select any version of Arabic in the dropdown menu (since Syriac is not
+                                available in the list, Arabic is the closest match), click "Apply", then click "OK".</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/language-settings.png" alt="Tools Language Menu">
+                                <div class="step-image-caption">Accessing the Language settings</div>
+                            </div>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/enable-ctl-arabic.png"
+                                    alt="Complex Text Layout Settings">
+                                <div class="step-image-caption">Enabling Complex Text Layout</div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Set Text Direction</strong>
+                            <p>Click on the >> icon on the extreme right of the toolbar and select the "Right to Left"
+                                icon as shown below.</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/rtl.png" alt="Right to Left Icon">
+                                <div class="step-image-caption">Select the Right to Left icon</div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>That's it!</strong>
+                            <p>You can now type Karshon in LibreOffice Writer using the SyriacKarshon keyboard layout.
+                                If you encounter any issues, please refer to the troubleshooting section below.</p>
+                            <div class="step-image">
+                                <img src="/articles/images/karshon-typing-mac/karshon-text.png" alt="Final Result">
+                                <div class="step-image-caption">Example of Karshon text typed in LibreOffice Writer on
+                                    MacOS</div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2 class="section-title">Troubleshooting</h2>
+                <div class="section-content">
+                    <ul class="step-list">
+                        <li>If you see Estangela letters instead of Karshon, make sure you've selected the Karshon font
+                            from the dropdown menu. You might need to do this a few times in the beginning.</li>
+                        <li>If the keyboard isn't working, verify that you've installed the Karshon keyboard layout
+                            correctly and that it appears in the input sources list.</li>
+                        <li>If the keyboard layout doesn't appear in the input sources, try rebooting your Mac and
+                            checking again.</li>
+                        <li>If you face any issues, please make a comment below.</li>
+                    </ul>
+                </div>
+            </section>
+
+            
+
+            <a href="/articles" class="back-to-home">
+                Back to Articles
+            </a>`;
+
+const styles = `
+        .back-to-home { display: none !important; }
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        /* Navbar Styles */
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        @media (max-width: 992px) {
+            
+
+            
+        }
+
+        @media (max-width: 768px) {
+            
+
+            
+
+            
+
+            
+
+            
+        }
+
+        @media (max-width: 480px) {
+            
+
+            
+
+            
+
+            
+        }
+
+        /* Article Styles */
+        
+
+        .article-header {
+            padding: 0 0 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(138, 60, 60, 0.12);
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .article-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .article-meta {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        .article-meta i {
+            margin-right: 0.5rem;
+            color: var(--tertiary-color);
+        }
+
+        .article-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-bg);
+        }
+
+        .section-content {
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .section-content p {
+            margin-bottom: 1.2rem;
+        }
+
+        .step-list {
+            list-style-type: none;
+            counter-reset: step-counter;
+        }
+
+        .step-list li {
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.8rem;
+            height: 1.8rem;
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .step-image {
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .step-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-image-caption {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .step-images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .note-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-home:hover {
+            background-color: #6b2f2f;
+        }
+
+        .back-to-home i {
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            
+
+            
+        }
+
+        @media (max-width: 480px) {
+            .article-title {
+                font-size: 1.7rem;
+            }
+
+            .article-header {
+            padding: 2rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+            .article-meta {
+                gap: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .back-to-home {
+                margin-top: 1.5rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            
+
+            
+
+            .footer-section:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        /* Footer Styles */
+        
+
+        
+
+        .footer-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        
+
+        
+
+        
+    `;
+
+export default function ArticlePage() {
+  return (
+    <ArticleShell
+      meta={meta}
+      html={html}
+      styles={styles}
+      showHeaderMeta={false}
+    />
+  );
+}
