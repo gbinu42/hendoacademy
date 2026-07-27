@@ -100,7 +100,7 @@ export default function RootLayout({
       <head>
         <link
           rel="preload"
-          href="/assets/fonts/SyrCOMAdiabene.ttf?v=8"
+          href="/assets/fonts/SyrCOMAdiabene.ttf?v=12"
           as="font"
           type="font/ttf"
           crossOrigin="anonymous"
