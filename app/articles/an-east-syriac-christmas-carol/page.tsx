@@ -683,7 +683,7 @@ const styles = `
 
         .malayalam-text {
             font-family: 'Noto Sans Malayalam', sans-serif;
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.8;
             padding: 0.5rem 0;
             text-align: center;
@@ -697,7 +697,7 @@ const styles = `
 
         .english-text {
             font-family: 'Noto Sans', sans-serif;
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.5;
             padding: 0.5rem 0;
             margin: 0;

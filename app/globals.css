@@ -314,8 +314,8 @@
 .article-content {
   font-family: var(--font-serif);
   color: #2a2622;
-  font-size: 0.875rem;
-  line-height: 1.715;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .article-content .english-title,
@@ -487,6 +487,12 @@
 .article-content p {
   margin: 0 0 1.25rem;
   max-width: 42rem;
+}
+
+.article-content .lead,
+.article-content .article-section > p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .article-content .article-body > p,

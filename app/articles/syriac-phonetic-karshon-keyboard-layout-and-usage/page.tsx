@@ -637,7 +637,7 @@ const styles = `
         }
 
         .section-content {
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.8;
             color: #444;
         }
@@ -889,7 +889,7 @@ const styles = `
             
 
             .section-content {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
 
             .article-meta {

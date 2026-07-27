@@ -94,7 +94,7 @@ export function ArticleHtml({ html }: ArticleHtmlProps) {
     const applyFamily = (fontFamily: string) => {
       root
         .querySelectorAll<HTMLElement>(
-          ".syriac-text, .syriac, .syriac-title, .syriac-header, .syriac-quote, .syriac-sample, .syriac-char, .suriyani-letter, .suriyani-example"
+          ".syriac-text, .syriac, .syriac-title, .syriac-header, .syriac-quote, .syriac-sample, .syriac-char, .suriyani-letter, .suriyani-example, .syr-letter, .syr-inline, .syr-block"
         )
         .forEach((el) => applyShaping(el, fontFamily));
     };
@@ -133,7 +133,7 @@ export function ArticleHtml({ html }: ArticleHtmlProps) {
 
     root
       .querySelectorAll<HTMLElement>(
-        ".syriac-text, .syriac, .syriac-title, .syriac-header, .syriac-quote, .syriac-sample, .syriac-char, .suriyani-letter, .suriyani-example"
+        ".syriac-text, .syriac, .syriac-title, .syriac-header, .syriac-quote, .syriac-sample, .syriac-char, .suriyani-letter, .suriyani-example, .syr-letter, .syr-inline, .syr-block"
       )
       .forEach((el) => {
         const isSuriyani =

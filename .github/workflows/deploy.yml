@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -30,10 +30,17 @@ jobs:
           node-version: "22"
           cache: npm
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build static export
+        # Project Pages are served at /hendoacademy on github.io; local/custom domain stay at /.
+        # Once github.io/hendoacademy 301s to the custom domain, drop this env and redeploy.
+        env:
+          PAGES_BASE_PATH: /hendoacademy
         run: npm run build
 
       - name: Upload Pages artifact

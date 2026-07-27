@@ -395,7 +395,7 @@ const styles = `
         }
 
         .section-content {
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.8;
         }
 
@@ -412,7 +412,7 @@ const styles = `
             margin-bottom: 2rem;
             padding-left: 3rem;
             position: relative;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         .step-list li::before {

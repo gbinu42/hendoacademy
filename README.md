@@ -9,6 +9,8 @@ npm install
 npm run dev
 ```
 
+Local URLs have no prefix: `http://localhost:3000/`, `http://localhost:3000/articles/neo-karshon`.
+
 ## Build (static export for GitHub Pages)
 
 ```bash
@@ -17,21 +19,26 @@ npm run build
 
 Output is written to `out/`. Deploy is handled by `.github/workflows/deploy.yml` on push to `master`.
 
-### Pages settings (required)
+The deploy workflow sets `PAGES_BASE_PATH=/hendoacademy` so assets resolve under the project Pages path on `github.io`. Local and custom-domain builds leave `basePath` unset.
 
-In [repo Settings → Pages](https://github.com/gbinu42/hendoacademy/settings/pages):
+### Why CSS breaks on github.io without basePath
 
-1. **Source:** GitHub Actions (not “Deploy from a branch”).
-2. **Custom domain:** `www.hendoacademy.org` (must match `public/CNAME`).
-3. Enable **Enforce HTTPS**.
-4. Prefer verifying the domain under the account’s Pages domain settings so another repo cannot claim it.
+This is a **project** site (`/hendoacademy`). Without `basePath`, CSS would load from `https://gbinu42.github.io/_next/...` (404) instead of `.../hendoacademy/_next/...`.
 
-DNS (already expected):
+With a **working** custom domain, GitHub 301s `github.io/hendoacademy` → the domain (see [hudra.day](https://hudra.day/)), so root `/_next` paths are fine on the domain. Once that redirect works, remove `PAGES_BASE_PATH` from the workflow and redeploy.
+
+### Pages settings
+
+In [Settings → Pages](https://github.com/gbinu42/hendoacademy/settings/pages):
+
+1. **Source:** GitHub Actions.
+2. Remove the custom domain, save, wait a minute, then add **`www.hendoacademy.org`** again (exactly that — not the apex alone).
+3. Wait until DNS checks are green, then enable **Enforce HTTPS**.
+4. Confirm `https://gbinu42.github.io/hendoacademy/` **301-redirects** to `https://www.hendoacademy.org/`. If it stays on github.io with a 200, the domain still is not bound here.
+
+DNS:
 
 - `www` → CNAME `gbinu42.github.io`
-- apex `hendoacademy.org` → GitHub Pages A records
+- apex → GitHub Pages A records
 
-After changing Source/domain, re-run **Deploy to GitHub Pages** (Actions → workflow → Run workflow), then confirm:
-
-- Working project URL: https://gbinu42.github.io/hendoacademy/
-- Custom domain should show the same site (not a bare Jekyll “11414” page)
+`public/CNAME` must match the custom domain field (`www.hendoacademy.org`).

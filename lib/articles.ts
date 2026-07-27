@@ -15,6 +15,18 @@ export type ArticleMeta = {
 
 export const articles: ArticleMeta[] = [
   {
+    slug: "neo-karshon",
+    title: "Neo Malayalam Karshon",
+    description:
+      "Hendo Academy's proposal for writing modern Malayalam in East Syriac script - supplying the letters classical Karshon lacked without asking for new Unicode code points.",
+    author: "Binu George",
+    date: "July 27, 2026",
+    excerpt:
+      "Classical Karshon was shaped for an older stage of Malayalam. Neo Malayalam Karshon is our proposal for the missing modern letters - especially Sanskrit loan aspirates and ഡ - built from characters Unicode already provides.",
+    listed: true,
+    hasComments: true,
+  },
+  {
     slug: "hendo-academy-launches-kerala's-first-indigenous-east-syriac-and-karshon-unicode-font-east-syriac-malankara",
     title: "East Syriac Malankara: India's First Indigenous Syriac & Karshon Font",
     description:
