@@ -19,13 +19,9 @@ npm run build
 
 Output is written to `out/`. Deploy is handled by `.github/workflows/deploy.yml` on push to `master`.
 
-The deploy workflow sets `PAGES_BASE_PATH=/hendoacademy` so assets resolve under the project Pages path on `github.io`. Local and custom-domain builds leave `basePath` unset.
+Deploy builds with **no** `basePath` (same as local). Assets use root paths (`/_next/...`, `/assets/...`).
 
-### Why CSS breaks on github.io without basePath
-
-This is a **project** site (`/hendoacademy`). Without `basePath`, CSS would load from `https://gbinu42.github.io/_next/...` (404) instead of `.../hendoacademy/_next/...`.
-
-With a **working** custom domain, GitHub 301s `github.io/hendoacademy` → the domain (see [hudra.day](https://hudra.day/)), so root `/_next` paths are fine on the domain. Once that redirect works, remove `PAGES_BASE_PATH` from the workflow and redeploy.
+`https://gbinu42.github.io/hendoacademy/` 301-redirects to `https://www.hendoacademy.org/`, so those root paths work on the custom domain. Do **not** set `PAGES_BASE_PATH=/hendoacademy` in CI: that prefixes CSS as `/hendoacademy/_next/...`, which 404s on the domain.
 
 ### Pages settings
 

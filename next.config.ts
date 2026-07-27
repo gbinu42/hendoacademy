@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
-// Local and custom-domain builds use no basePath (site at /).
-// GitHub Actions sets PAGES_BASE_PATH=/hendoacademy for project Pages on github.io.
+// Site is served at / (custom domain + local). Optional PAGES_BASE_PATH is only for
+// rare project-Pages-only previews; production deploy must leave it unset.
 const basePath = process.env.PAGES_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {

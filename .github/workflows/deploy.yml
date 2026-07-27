@@ -37,10 +37,9 @@ jobs:
         run: npm ci
 
       - name: Build static export
-        # Project Pages are served at /hendoacademy on github.io; local/custom domain stay at /.
-        # Once github.io/hendoacademy 301s to the custom domain, drop this env and redeploy.
-        env:
-          PAGES_BASE_PATH: /hendoacademy
+        # Custom domain (www.hendoacademy.org) serves at /. Do not set PAGES_BASE_PATH:
+        # github.io/hendoacademy already 301s to the domain, and a /hendoacademy basePath
+        # makes CSS/JS request /hendoacademy/_next/... which 404s on the domain.
         run: npm run build
 
       - name: Upload Pages artifact
