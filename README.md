@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Local URLs have no prefix: `http://localhost:3000/`, `http://localhost:3000/articles/neo-karshon`.
+Local URLs have no prefix: `http://localhost:3000/`, `http://localhost:3000/articles/neo-malayalam-karshon`.
 
 ## Build (static export for GitHub Pages)
 

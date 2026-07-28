@@ -15,7 +15,7 @@ export type ArticleMeta = {
 
 export const articles: ArticleMeta[] = [
   {
-    slug: "neo-karshon",
+    slug: "neo-malayalam-karshon",
     title: "Neo Malayalam Karshon",
     description:
       "Hendo Academy's proposal for writing modern Malayalam in East Syriac script - supplying the letters classical Karshon lacked without asking for new Unicode code points.",
@@ -23,7 +23,7 @@ export const articles: ArticleMeta[] = [
     date: "July 27, 2026",
     excerpt:
       "Classical Karshon was shaped for an older stage of Malayalam. Neo Malayalam Karshon is our proposal for the missing modern letters - especially Sanskrit loan aspirates and ഡ - built from characters Unicode already provides.",
-    image: "/articles/images/neo-karshon/title.png",
+    image: "/articles/images/neo-malayalam-karshon/title.png",
     imageAlt: "Neo Malayalam Karshon - നിയോ മലയാളം കർശോൻ - ܢܝܼܝܘܿ ܡܲܠܲܝܵࡨܲܡ ܟܲܪܫܘܿܢ",
     listed: true,
     hasComments: true,

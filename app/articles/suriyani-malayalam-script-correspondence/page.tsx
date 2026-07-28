@@ -59,7 +59,7 @@ const html = `<header class="article-header">
                 <h2 class="section-title">Introduction</h2>
                 <div class="section-content">
                     <p>Suriyani Malayalam (Karshon / Garshuni Malayalam) writes Malayalam in East Syriac script. It was used by Saint Thomas Christians in Kerala for liturgy and letters into the early 20th century.</p>
-                    <p>This page lists letter values as rendered with East Syriac Malankara, with a Malayalam word and its Karshon spelling for each entry. The modern letters follow <a href="/articles/neo-karshon">Neo Karshon</a>, Hendo Academy's proposal for the letters classical Karshon never covered.</p>
+                    <p>This page lists letter values as rendered with East Syriac Malankara, with a Malayalam word and its Karshon spelling for each entry. The modern letters follow <a href="/articles/neo-malayalam-karshon">Neo Karshon</a>, Hendo Academy's proposal for the letters classical Karshon never covered.</p>
                 </div>
             </section>
 
