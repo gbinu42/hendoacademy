@@ -50,12 +50,14 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/assets/images/logo.jpg",
-        alt: "Hendo Academy",
+        url: "/articles/images/neo-karshon/title.png",
+        alt: "Neo Malayalam Karshon - നിയോ മലയാളം കർശോൻ",
+        width: 1600,
+        height: 1200,
       },
     ],
     publishedTime: "2026-07-27T00:00:00.000Z",
-    modifiedTime: "2026-07-27T00:00:00.000Z",
+    modifiedTime: "2026-07-28T00:00:00.000Z",
     authors: ["Binu George"],
     section: "Articles",
     tags: [
@@ -72,7 +74,7 @@ export const metadata: Metadata = {
     title: "Neo Malayalam Karshon",
     description:
       "Hendo Academy's proposal for writing modern Malayalam in East Syriac script - supplying the letters classical Karshon lacked without asking for new Unicode code points.",
-    images: ["/assets/images/logo.jpg"],
+    images: ["/articles/images/neo-karshon/title.png"],
   },
   alternates: {
     canonical: `https://www.hendoacademy.org/articles/${slug}`,
@@ -306,7 +308,9 @@ const creedRows = creedLines
   )
   .join("\n");
 
-const html = `<p class="lead">Hendo Academy's proposal for writing modern Malayalam in East Syriac script - a finished design, not yet an established practice. Also called Neo Malayalam Garshuni.</p>
+const html = `<img src="/articles/images/neo-karshon/title.png" alt="Neo Malayalam Karshon - നിയോ മലയാളം കർശോൻ - ܢܝܼܝܘܿ ܡܲܠܲܝܵࡨܲܡ ܟܲܪܫܘܿܢ" class="featured-image" width="1600" height="1200">
+
+            <p class="lead">Hendo Academy's proposal for writing modern Malayalam in East Syriac script - a finished design, not yet an established practice. Also called Neo Malayalam Garshuni.</p>
 
             <div class="font-selector">
                 <label for="syriac-font">Syriac font:</label>
@@ -331,12 +335,12 @@ const html = `<p class="lead">Hendo Academy's proposal for writing modern Malaya
                 <p>Karshon - also called Karshoni, Garshuni Malayalam, or Suriyani Malayalam - means writing the Malayalam language in East Syriac script. Saint Thomas Christians in Kerala used it for liturgy, letters, and literature into the early twentieth century.</p>
                 <p>Classical Syriac has only twenty-two consonants. Malayalam needs far more. Historical Karshon solved much of that gap by adding special letter shapes - originally drawn from older Malayalam scripts - for sounds such as <span class="ml">ങ</span>, <span class="ml">ജ</span>, <span class="ml">ട</span>, <span class="ml">ണ</span>, <span class="ml">ഭ</span>, <span class="ml">ള</span>, <span class="ml">ഴ</span>, and <span class="ml">ഷ</span>. Eleven of those Garshuni letters are now in Unicode as the Syriac Supplement (U+0860-U+086A).</p>
                 <p>Even so, classical Karshon was shaped for an older stage of Malayalam. Modern Malayalam has letters and distinctions that classical Karshon simply did not cover - especially several letters borrowed from Sanskrit in the last few centuries. In particular, a set of aspirates (<span class="ml">ഘ</span>, <span class="ml">ഛ</span>, <span class="ml">ഝ</span>, <span class="ml">ഠ</span>, <span class="ml">ഢ</span>, <span class="ml">ധ</span>) and the retroflex voiced stop <span class="ml">ഡ</span> have no dedicated classical Karshon letter.</p>
-                <p>Nobody has settled how to write those letters. Manuscript practice stopped before the question became pressing, and no modern authority has ruled on it, so anyone typing contemporary Malayalam in Syriac script has had to improvise. Our proposal, which we call <strong>Neo Karshon</strong>, keeps the classical inventory - ordinary Syriac letters plus the Syriac Supplement - and builds the missing modern values from characters Unicode already provides. The aim is to write present-day Malayalam in Suriyani Malayalam without abandoning older texts or asking for new code points.</p>
+                <p>Nobody has settled how to write those letters. Manuscript practice stopped before the question became pressing, and no modern authority has ruled on it, so anyone typing contemporary Malayalam in Syriac script has had to improvise. Our proposal, which we call <strong>Neo Malayalam Karshon</strong>, or <strong>Neo Karshon</strong> for short, keeps the classical inventory - ordinary Syriac letters plus the Syriac Supplement - and builds the missing modern values from characters Unicode already provides. The aim is to write present-day Malayalam in Suriyani Malayalam without abandoning older texts or asking for new code points.</p>
             </section>
 
             <section class="article-section">
                 <h2 class="section-title">The name</h2>
-                <p>We chose the name ourselves; it is not a traditional term, and no one used it before this proposal. The full title is <em>Neo Malayalam Karshon</em>; <em>Neo Karshon</em> is the short form used below. The <em>Neo</em> follows the usage of Neo-Aramaic, where a living stage of the language is written with the inherited script plus a few extra marks for sounds Classical Syriac never had. That is exactly the relationship we intend here: <em>Karshon</em> remains the historical orthography of the manuscripts, and <em>Neo Karshon</em> names the extended version for modern Malayalam. Where the Garshuni form is clearer, we also write <em>Neo Malayalam Garshuni</em>.</p>
+                <p>We coined the name; it is not a traditional term. The <em>Neo</em> follows Neo-Aramaic: the inherited script, extended with a few marks for sounds Classical Syriac never had. <em>Karshon</em> stays the manuscript orthography; <em>Neo Karshon</em> is the version for modern Malayalam. Where the Garshuni label is clearer, we also write <em>Neo Malayalam Garshuni</em>.</p>
             </section>
 
             <section class="article-section">
@@ -352,7 +356,7 @@ const html = `<p class="lead">Hendo Academy's proposal for writing modern Malaya
 
             <section class="article-section">
                 <h2 class="section-title">Aspiration: Combining Tilde (majliyana)</h2>
-                <p>Where classical Karshon had no letter for an aspirated consonant, we take the matching unaspirated base and add <strong>Combining Tilde</strong> (U+0303, <span class="mark-sample">◌̃</span>). In Syriac tradition this mark is called <strong>majliyana</strong> (<span class="syr-inline" dir="rtl" lang="syr">ܡܲܓ̰ܠܝܼܵܢܵܐ</span>). The same majliyana is already used in Neo-Aramaic orthography to write sounds that Classical Syriac lacks, so we are borrowing an established East Syriac device rather than inventing a private mark.</p>
+                <p>Where classical Karshon had no letter for an aspirated consonant, we take the matching unaspirated base and add <strong>Combining Tilde</strong> (U+0303, <span class="syr-inline" dir="rtl" lang="syr">ܐ̃</span>). In Syriac tradition this mark is called <strong>majliyana</strong> (<span class="syr-inline" dir="rtl" lang="syr">ܡܲܓ̰ܠܝܼܵܢܵܐ</span>). The same majliyana is already used in Neo-Aramaic orthography to write sounds that Classical Syriac lacks, so we are borrowing an established East Syriac device rather than inventing a private mark.</p>
                 <p>Malayalam grammar, following Sanskrit, divides each varga row five ways, and those five categories are the columns of the chart below:</p>
                 <ul class="example-pairs">
                     <li><strong><span class="ml">ഖരം</span></strong> (kharam) - voiceless unaspirated: <span class="ml">ക ച ട ത പ</span></li>
@@ -392,15 +396,16 @@ const html = `<p class="lead">Hendo Academy's proposal for writing modern Malaya
                 <ul class="example-pairs">
                     <li><span class="ml">ച</span> = <span class="syr-inline" dir="rtl" lang="syr">ܫ݁</span> (shin with dot above)</li>
                     <li><span class="ml">ശ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܫ</span> (plain shin)</li>
-                    <li><span class="ml">ബ്</span> = <span class="syr-inline" dir="rtl" lang="syr">ܒ</span> (plain beth)</li>
-                    <li><span class="ml">വ്</span> = <span class="syr-inline" dir="rtl" lang="syr">ܒ݂</span> (beth with dot below)</li>
+                    <li><span class="ml">ബ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܒ</span> (plain beth)</li>
+                    <li><span class="ml">വ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܒ݂</span> (beth with dot below)</li>
                 </ul>
+                <p>Writing <span class="ml">വ</span> with beth rather than waw (<span class="syr-inline" dir="rtl" lang="syr">ܘ</span>) follows manuscript practice: classical Karshon already used soft beth for that sound, and Neo Karshon only adds the rukkakha to mark it clearly.</p>
                 <p><span class="ml">ഫ</span> belongs with these dotted letters, but it needs no new decision of ours. East Syriac already writes the soft value of pe with rukkakha, and we keep that same form for Malayalam <span class="ml">ഫ</span>:</p>
                 <ul class="example-pairs">
                     <li><span class="ml">പ്</span> = <span class="syr-inline" dir="rtl" lang="syr">ܦ</span> (plain pe)</li>
                     <li><span class="ml">ഫ്</span> = <span class="syr-inline" dir="rtl" lang="syr">ܦ݂</span> (pe with dot below - the ordinary East Syriac soft pe)</li>
                 </ul>
-                <p>As with majliyana, nothing new is encoded and no under-line is touched. The marks are ordinary Syriac dots put to a Malayalam use. For <span class="ml">ച</span> / <span class="ml">ശ</span> and <span class="ml">ബ്</span> / <span class="ml">വ്</span>, a classical spelling written without the Neo dots still renders correctly - it simply carries the older ambiguity. For <span class="ml">ഫ</span>, the dotted pe is already the classical East Syriac reading.</p>
+                <p>As with majliyana, nothing new is encoded and no under-line is touched. The marks are ordinary Syriac dots put to a Malayalam use. For <span class="ml">ച</span> / <span class="ml">ശ</span> and <span class="ml">ബ</span> / <span class="ml">വ</span>, a classical spelling written without the Neo dots still renders correctly - it simply carries the older ambiguity. For <span class="ml">ഫ</span>, the dotted pe is already the classical East Syriac reading.</p>
             </section>
 
             <section class="article-section">
@@ -425,14 +430,15 @@ const html = `<p class="lead">Hendo Academy's proposal for writing modern Malaya
                 <div class="alphabet-chart">
 ${alphabetChart}
                 </div>
-                <p>Two independent vowels depart from traditional Karshon on purpose. Classical practice, following Syriac spelling habits more closely, wrote <span class="ml">ഐ</span> as <span class="syr-inline" dir="rtl" lang="syr">ܐܵܝ</span> and <span class="ml">ഔ</span> as <span class="syr-inline" dir="rtl" lang="syr">ܐܵܘ</span> - alaph with zqapha before yodh or waw. Neo Karshon uses ptaha instead: <span class="ml">ഐ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܐܲܝ</span>, <span class="ml">ഔ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܐܲܘ</span>. That matches the dependent signs <span class="ml">ൈ</span> / <span class="ml">ൗ</span> (<span class="syr-inline" dir="rtl" lang="syr">ܲܝ</span> / <span class="syr-inline" dir="rtl" lang="syr">ܲܘ</span>) and sits closer to Malayalam phonetics than to Syriac orthographic convention.</p>
+                <p>Two independent vowels depart from traditional Karshon on purpose. Classical practice, following Syriac spelling habits more closely, wrote <span class="ml">ഐ</span> as <span class="syr-inline" dir="rtl" lang="syr">ܐܵܝ</span> and <span class="ml">ഔ</span> as <span class="syr-inline" dir="rtl" lang="syr">ܐܵܘ</span> - alaph with zqapha before yodh or waw. Neo Karshon uses ptaha instead: <span class="ml">ഐ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܐܲܝ</span>, <span class="ml">ഔ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܐܲܘ</span>. That matches the dependent signs <span class="ml">ൈ</span> / <span class="ml">ൗ</span> (<span class="syr-inline" dir="rtl" lang="syr">ܐܲܝ</span> / <span class="syr-inline" dir="rtl" lang="syr">ܐܲܘ</span>) and sits closer to Malayalam phonetics than to Syriac orthographic convention.</p>
+                <p>Word endings follow the same phonetic preference. Traditional Syriac orthography expects a final long ā - zqapha (<span class="syr-inline" dir="rtl" lang="syr">ܐܵ</span>) - rather than a short a - ptaha (<span class="syr-inline" dir="rtl" lang="syr">ܐܲ</span>). Neo Karshon usually keeps ptaha on the last letter, so the ending matches modern Malayalam. If that looks unsightly against Syriac habit, leaving the vowel off the terminal letter is also fine: a final alaph already indicates the vowel sound, and there is manuscript precedent for writing it that way.</p>
                 <p>The remaining signs are marks rather than letters:</p>
                 <ul class="example-pairs">
-                    <li>anusvāra <span class="ml">ം</span> = <span class="syr-inline" dir="rtl" lang="syr">ܡ</span>, as in <span class="ml">നാമം</span> = <span class="syr-inline" dir="rtl" lang="syr">ࡥܵܡܲܡ</span></li>
-                    <li>visarga <span class="ml">ഃ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܐ݈</span></li>
-                    <li>virama <span class="ml">്</span> = no vowel mark on the letter</li>
-                    <li>doubling <span class="ml">ക്ക</span> = one letter with the line below, <span class="syr-inline" dir="rtl" lang="syr">ܟ̱</span></li>
-                    <li>aspiration <span class="ml">ഘ</span> = majliyana above, <span class="syr-inline" dir="rtl" lang="syr">ܓ̃</span></li>
+                    <li>anusvaram <span class="ml">ം</span> = <span class="syr-inline" dir="rtl" lang="syr">ܡ</span>, as in <span class="ml">നാമം</span> = <span class="syr-inline" dir="rtl" lang="syr">ࡥܵܡܲܡ</span></li>
+                    <li>visargam <span class="ml">ഃ</span> = <span class="syr-inline" dir="rtl" lang="syr">ܐ݈</span></li>
+                    <li>viramam <span class="ml">്</span> = no vowel mark on the letter</li>
+                    <li><span class="ml">ക്ക</span> = one letter with the line below, <span class="syr-inline" dir="rtl" lang="syr">ܟ̱</span></li>
+                    <li><span class="ml">ഘ</span> = majliyana above, <span class="syr-inline" dir="rtl" lang="syr">ܓ̃</span></li>
                 </ul>
                 <p class="chart-note">For word-level examples and compound letters, see the <a href="/articles/suriyani-malayalam-script-correspondence">script correspondence</a> table.</p>
             </section>
@@ -481,7 +487,7 @@ ${creedRows}
 
             <section class="article-section">
                 <h2 class="section-title">Status of the proposal</h2>
-                <p>The design is complete. Every letter of modern Malayalam has a value, the chart above is the whole inventory, and the rules are specified tightly enough to run as code - which is how the Our Father and Creed above were transliterated. It is also implemented rather than merely described: our font renders it, our keyboard types it, and our converter applies it.</p>
+                <p>The design is complete. Every letter of modern Malayalam has a value, the chart above is the whole inventory, and the rules are specified tightly enough that the Our Father and Creed above could be transliterated from them. It is also implemented rather than merely described: our font renders it, and our keyboard types it.</p>
                 <p>What it is not is settled. There is no corpus written in Neo Karshon yet, no institution has adopted it, and we are not asking Unicode for anything - the whole point of the constraints was to avoid needing to. Individual choices are open to argument, and we would rather revise a letter now than defend it later, so corrections from Syriac and Malayalam scholars are genuinely welcome. If a better value can be shown for <span class="ml">ഡ</span>, or for any of the six aspirates, we will change it.</p>
             </section>
 
@@ -513,6 +519,15 @@ const styles = `
             color: #4a4540;
             margin: 0 auto 2rem;
             max-width: 38rem;
+        }
+
+        .featured-image {
+            display: block;
+            width: 100%;
+            max-width: 36rem;
+            height: auto;
+            margin: 0 auto 1.75rem;
+            border-radius: 0.25rem;
         }
 
         .article-section {
@@ -584,11 +599,6 @@ const styles = `
             outline: none;
             border-color: var(--secondary-color, #d4a445);
             box-shadow: 0 0 0 2px rgba(212, 164, 69, 0.25);
-        }
-
-        .mark-sample {
-            font-size: 1.5em;
-            font-family: "East Syriac Adiabene", "Karshon", serif;
         }
 
         .syr-inline,
