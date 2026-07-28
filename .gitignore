@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Temporary stubs so Cursor can close deleted pre-Next.js HTML tabs
+/index.html
+/editor.html
+/articles/*.html
+/books/*.html
+/js/
