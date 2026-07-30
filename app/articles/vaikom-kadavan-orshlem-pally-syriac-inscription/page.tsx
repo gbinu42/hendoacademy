@@ -169,6 +169,16 @@ const html = `
       <img src="${img}/malayalam-inscription.jpg" alt="Malayalam inscription at Kadavan Pally" class="article-image" />
       <div class="article-image-caption">Image of the Malayalam Inscription</div>
     </div>
+
+    <h4 class="article-subtitle">Malayalam Transcription</h4>
+    <div class="inscription-block malayalam-inscription">
+      <p class="inscription-ml-line" lang="ml">കല്ലറയ്ക്കൽ കടവിൽ വർക്കിവർക്കിയെന്ന ആളുടെ നിര്യാണത്തിന്റെ ദ്വാദശപക്ഷസ്മാരകമായി 1917 ജൂലായി 1 ന് എറ. വികാ. അപ്പ്. നി. വ. ദിവ്യശ്രീ പഴെപറമ്പിൽ മാർ ളുയീസുമെത്രാച്ചനവർകളുടെ കല്പന പ്രകാരം കല്ലറയ്ക്കൽ കടവിൽ ബ. വർക്കി മാത്തൻ കത്തനാരാൽ ഈ (ഓർശ്ശെലം) പള്ളിയുടെ ശിലാസ്ഥാപനകർമ്മം നടത്തപ്പെട്ടു</p>
+    </div>
+
+    <h4 class="article-subtitle">English Translation of the Malayalam</h4>
+    <p>
+      As a twelfth memorial of the demise of Mr. Varkey Varkey of Kallarakkal Kadavil, the foundation stone laying ceremony of this (Oreshlem) church was conducted on July 1, 1917, by Rev. Kallarakkal Kadavil Varkey Mathan Kathanar, in accordance with the decree of the Vicar Apostolic of Ernakulam, Most Rev. Bishop Mar Louis Pazheparambil.
+    </p>
   </div>
 
   <div class="article-section">
@@ -388,6 +398,15 @@ const styles = `
       font-weight: 600;
       text-align: center;
       margin-bottom: 0.75rem !important;
+    }
+
+    .article-content .malayalam-inscription .inscription-ml-line {
+      margin: 0;
+      font-family: var(--font-malayalam), "Noto Sans Malayalam", sans-serif;
+      font-size: 1.15rem;
+      line-height: 1.9;
+      text-align: justify;
+      color: #000;
     }
 
     .article-content .article-image-container {
