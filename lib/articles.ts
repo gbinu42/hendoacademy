@@ -15,6 +15,21 @@ export type ArticleMeta = {
 
 export const articles: ArticleMeta[] = [
   {
+    slug: "vaikom-kadavan-orshlem-pally-syriac-inscription",
+    title: "Vaikom Kadavan Orshlem Pally Syriac Inscription",
+    description:
+      "A study of the hundred-year-old East Syriac inscription at Vaikom Kadavan Orshlem Pally, with transliteration, translation, and historical context of Syriac inscriptions in India.",
+    author: "Josekutty Abraham",
+    date: "",
+    excerpt:
+      "The East Syriac foundation inscription at Vaikom Kadavan Orshlem Pally (1917) is a rare narrative epigraph from a remote Kerala parish. This article presents its transliteration, translation, and place in the history of Syriac inscriptions in India.",
+    image:
+      "/articles/images/vaikom-kadavan-orshlem-pally-syriac-inscription/kadavan-pally.jpg",
+    imageAlt: "Kadavan Orshlem Pally, Vaikom",
+    listed: true,
+    hasComments: true,
+  },
+  {
     slug: "neo-malayalam-karshon",
     title: "Neo Malayalam Karshon",
     description:
