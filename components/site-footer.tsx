@@ -36,6 +36,7 @@ function footerLinks(variant: NavVariant): FooterLink[] {
     { href: `${prefix}#editor`, label: "Syriac Editor" },
     { href: "/articles", label: "Articles" },
     { href: `${prefix}#books`, label: "Books" },
+    { href: `${prefix}#hudra`, label: "Hudra" },
     { href: YOUTUBE_URL, label: "Videos", external: true },
     { href: `${prefix}#contact`, label: "Contact" },
   ];

@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   BookOpen,
+  ExternalLink,
   FileText,
   Keyboard,
   Smartphone,
@@ -228,7 +229,64 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="editor" className="bg-brand-light py-16">
+      <section id="hudra" className="bg-brand-light py-16">
+        <div className="container-site">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="mb-2 text-3xl font-bold text-brand">
+                Hudra{" "}
+                <SyriacText className="text-[0.9em]">ܚܘܼܕܪܵܐ</SyriacText>
+              </h2>
+              <p className="mb-2 font-serif text-xl text-brand-blue">
+                hudra.day
+              </p>
+              <p className="mb-6 max-w-xl text-lg leading-relaxed">
+                A Hendo Academy initiative to digitize and freely share East
+                Syriac liturgical texts - books, hymns, recordings, and tools for
+                scholars, clergy, and communities.
+              </p>
+              <ul className="mb-8 list-none space-y-3 p-0">
+                <li className="flex items-start gap-3">
+                  <BookOpen className="mt-0.5 size-5 shrink-0 text-brand" />
+                  <span>Digitized East Syriac liturgical books</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FileText className="mt-0.5 size-5 shrink-0 text-brand" />
+                  <span>Hymns and recordings with translations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Keyboard className="mt-0.5 size-5 shrink-0 text-brand" />
+                  <span>Online East Syriac and Karshon editor</span>
+                </li>
+              </ul>
+              <a
+                href="https://hudra.day"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded bg-brand px-5 py-3 font-semibold text-white no-underline transition hover:bg-brand-blue"
+              >
+                Visit hudra.day <ExternalLink className="size-4" />
+              </a>
+            </div>
+            <div className="overflow-hidden rounded-lg border border-border bg-white p-8 shadow-md">
+              <p className="syriac mb-4 text-center text-3xl leading-relaxed text-brand md:text-4xl">
+                ܚܘܼܕܪܵܐ
+              </p>
+              <p className="mb-4 text-center font-serif text-lg text-brand">
+                Digital Archive of East Syriac Liturgical Texts
+              </p>
+              <p className="syriac mb-2 text-center text-base leading-relaxed text-brand-blue md:text-lg">
+                ܡܲܓܵܢ ܢܣܲܒ݂ܬܘܿܢ ܡܲܓܵܢ ܗܲܒ݂ܘ܀
+              </p>
+              <p className="text-center text-sm italic text-foreground/70">
+                Freely you have received; freely give. - Matthew 10:8
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="editor" className="py-16">
         <div className="container-site">
           <h2 className="mb-8 text-3xl font-bold text-brand">
             Syriac Editor <SyriacText>ܡܲܟܬܒܵܢܵܐ ܣܘܼܪܝܵܝܵܐ</SyriacText>
@@ -291,7 +349,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="videos" className="py-16">
+      <section id="videos" className="bg-brand-light py-16">
         <div className="container-site">
           <h2 className="mb-4 text-3xl font-bold text-brand">
             Educational Videos
@@ -333,7 +391,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-brand-light py-16">
+      <section id="contact" className="py-16">
         <div className="container-site">
           <h2 className="mb-6 text-3xl font-bold text-brand">Contact Us</h2>
           <div className="max-w-2xl">

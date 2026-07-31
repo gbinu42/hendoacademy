@@ -37,6 +37,7 @@ function navItemsFor(variant: NavVariant): NavItem[] {
       { href: "/editor", label: "Syriac Editor" },
       { href: "/articles", label: "Articles" },
       { href: "/#books", label: "Books" },
+      { href: "/#hudra", label: "Hudra" },
       { href: YOUTUBE_URL, label: "Videos", external: true },
       { href: "/#contact", label: "Contact" },
     ];
@@ -48,6 +49,7 @@ function navItemsFor(variant: NavVariant): NavItem[] {
     { href: "/editor", label: "Syriac Editor" },
     { href: "/articles", label: "Articles" },
     { href: "#books", label: "Books" },
+    { href: "#hudra", label: "Hudra" },
     { href: YOUTUBE_URL, label: "Videos", external: true },
     { href: "#contact", label: "Contact" },
   ];

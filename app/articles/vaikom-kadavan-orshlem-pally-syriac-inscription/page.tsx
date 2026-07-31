@@ -144,13 +144,13 @@ const html = `
     <h4 class="article-subtitle">Syriac Transcription</h4>
     <div class="inscription-block syriac-inscription" dir="rtl" lang="syr">
       <p class="syr-block inscription-syr-line">ܝ܀ ܡ ܀ ܝ</p>
-      <p class="syr-block inscription-syr-line">ܠܕܘܼܟ݂ܪܵܢ ܫܲܢ݇ܬܵܐ ܬܪܸܥܣܝܼܪܵܝܬܵܐ ܕܫܘܼܢܵܝ ܓܝܼܘܲܪܓܝܼܣ ܒܲܪ ܓܝܼܘܲܪܓܝܼܣ ܕܡ̣ܢ ܛܘܿܗܡܵܐ ܟܲܢܝܵܐ ܩܲܠܠܲܪܲܩܲܠ ܩܲܕܘܝܼܠ ܒܡܲܦܣܵܢܘܼܬ݂ ܡܵܪܝ ܠܘܝܼܣ ܦܪܹܦܪܲܡܒܝܼܠ ܟܠܹܗ ܐܝܼܩܵܪܵܐ ܐܲܦܸܣܩܘܿܦܵܐ ܕܛܝܼܢܵܐ ܘܩܲܝܘܿܡܵܐ ܫܠܝܼܚܵܝܵܐ ܕܐܸܪܢܵܟܘܼܠܲܡ: ܐܸܬܥܣܝܼܡܲܬ݂ ܡ̣ܢ ܩܲܫܝܼܫܵܐ ܡܝܲܩܪܵܐ ܡܲܬܲܝ ܒܲܪ ܓܝܼܘܲܪܓܝܼܣ ܥܗܝܼܕܵܐ ܟܐܹܦܵܐ ܕܪܹܫ ܒܸܢܝܵܢ ܥܹܕܬܵܐ ܗܵܕܹܐ ܕܲܫܡܹܗ ܐܘܿܪܸܫܠܸܡ ܒܐܸܫܬܬܥܣܲܪ ܒܝܲܪܚ ܬܡܘܼܙ ܒܫܵܥܬ݂ ܐܨ̈ܝܙ ܠܡܵܪܲܢ.</p>
+      <p class="syr-block inscription-syr-line">ܠܕܘܼܟ݂ܪܵܢ ܫܲܢ݇ܬܵܐ ܬܪܸܥܣܝܼܪܵܝܬܵܐ ܕܫܘܼܢܵܝ ܓܝܼܘܲܪܓܝܼܣ ܒܲܪ ܓܝܼܘܲܪܓܝܼܣ ܕܡ̣ܢ ܛܘܿܗܡܵܐ ܟܢܵܐ ܩܲܠܠܲܪܲܩܲܠ ܩܲܕܘܝܼܠ ܒܡܲܦܣܵܢܘܼܬ݂ ܡܵܪܝ ܠܘܝܼܣ ܦܪܹܦܪܲܡܒܝܼܠ ܟܠܹܗ ܐܝܼܩܵܪܵܐ ܐܲܦܸܣܩܘܿܦܵܐ ܕܛܝܼܢܵܐ ܘܩܲܝܘܿܡܵܐ ܫܠܝܼܚܵܝܵܐ ܕܐܸܪܢܵܟܘܼܠܲܡ: ܐܸܬܥܣܝܼܡܲܬ݂ ܡ̣ܢ ܩܲܫܝܼܫܵܐ ܡܝܲܩܪܵܐ ܡܲܬܲܝ ܒܲܪ ܓܝܼܘܲܪܓܝܼܣ ܥܗܝܼܕܵܐ ܟܐܹܦܵܐ ܕܪܹܫ ܒܸܢܝܵܢ ܥܹܕܬܵܐ ܗܵܕܹܐ ܕܲܫܡܹܗ ܐܘܿܪܸܫܠܸܡ ܒܐܸܫܬܬܥܣܲܪ ܒܝܲܪܚ ܬܡܘܼܙ ܒܫܵܥܬ݂ ܐܨ̈ܝܙ ܠܡܵܪܲܢ.</p>
     </div>
 
     <h4 class="article-subtitle">English Phonetic Transliteration</h4>
     <div class="inscription-block phonetic-inscription">
       <p class="inscription-line inscription-line-center">Īshōʿ . Maryam . Yawsēp</p>
-      <p class="inscription-line inscription-phonetic">l-duḵrān šattā trēʿasīrāytā d-šūnāy Gīwargīs bar Gīwargīs d-min ṭōhmā kanyā Qallaraqal Qadwil [Kallarackal Kadavil] b-mapsānūţ Mār Luīs Parēparambīl kollē īqārā appesqōpā d-Ṭīnā w-qayyōmā šlīḥāyā d-Ernākulam: etʿasīmaţ min qaššīšā myaqrā Mattay bar Gīwargīs ʿahīdā kēppā d-rēš benyān ʿēdtā hādē da-šmēh Ōrešlem beštatʿasar b-yarḥ tammūz b-šāʿaţ 1917 l-māran.</p>
+      <p class="inscription-line inscription-phonetic">l-duḵrān šattā trēʿasīrāytā d-šūnāy Gīwargīs bar Gīwargīs d-min ṭōhmā knā Qallaraqal Qadwil [Kallarackal Kadavil] b-mapsānūţ Mār Luīs Parēparambīl kollē īqārā appesqōpā d-Ṭīnā w-qayyōmā šlīḥāyā d-Ernākulam: etʿasīmaţ min qaššīšā myaqrā Mattay bar Gīwargīs ʿahīdā kēppā d-rēš benyān ʿēdtā hādē da-šmēh Ōrešlem beštatʿasar b-yarḥ tammūz b-šāʿaţ 1917 l-māran.</p>
     </div>
 
     <h4 class="article-subtitle">Transliteration</h4>
