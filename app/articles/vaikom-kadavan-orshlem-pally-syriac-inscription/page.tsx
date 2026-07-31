@@ -206,7 +206,7 @@ const html = `
   </div>
 
   <p class="article-publication-note">
-    Originally published in <em>The Harp</em> (SEERI, Kottayam). Republished here.
+    Originally presented at the 10th World Syriac Conference held at SEERI, Kottayam, on 11 September 2023, and published in <em>The Harp</em>, Vol. XL. This is an updated version of that article.
   </p>
 
   <div class="article-author">
@@ -442,7 +442,7 @@ const styles = `
     .article-content .article-publication-note {
       font-style: italic;
       color: #6b6460;
-      text-align: right;
+      text-align: center;
       margin: 2rem 0 1rem;
       padding-top: 1rem;
       border-top: 1px solid rgba(138, 60, 60, 0.12);
