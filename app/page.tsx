@@ -61,15 +61,27 @@ export default function HomePage() {
           </div>
           <div className="flex-1 text-center md:text-left">
             <h1 className="mb-3 text-2xl font-bold leading-snug md:text-4xl">
-              മലങ്കര <SyriacText>ܒܝܬ ܐܦܪܝܡ</SyriacText> നസ്രാണി യോഗം - ഹെന്ദോ
-              അക്കാദമി
+              മലങ്കര{" "}
+              <SyriacText
+                className="font-normal"
+                fontFamily='"Estrangelo Qenneshrin", serif'
+              >
+                ܒܝܬ ܐܦܪܝܡ
+              </SyriacText>{" "}
+              നസ്രാണി യോഗം - ഹെന്ദോ അക്കാദമി
             </h1>
-            <h2 className="syriac mb-3 text-xl leading-relaxed md:text-3xl">
+            <h2 className="syriac mb-3 text-3xl leading-relaxed md:text-5xl">
               ܡܲܠܲܢܟܲࡧܲܐ ܒܹܝܬ݂ ܐܲܦܪܹܝܡ ܢܲܣܪܵࡤܝܼ ܝܘܿܓܲܡ - ܗܸࡥܕܘܿ ܐܲܟ̱ܵܕܲܡܝܼ
             </h2>
             <h3 className="mb-4 text-lg font-semibold text-brand-gold md:text-2xl">
-              Malankara <SyriacText>ܒܝܬ ܐܦܪܝܡ</SyriacText> Nasrani Yogam -
-              Hendo Academy
+              Malankara{" "}
+              <SyriacText
+                className="font-normal"
+                fontFamily='"Estrangelo Qenneshrin", serif'
+              >
+                ܒܝܬ ܐܦܪܝܡ
+              </SyriacText>{" "}
+              Nasrani Yogam - Hendo Academy
             </h3>
             <p className="text-base text-white/90 md:text-lg">
               Heritage of the Saint Thomas Christians of India

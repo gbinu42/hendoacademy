@@ -403,7 +403,7 @@ const styles = `
     .article-content .malayalam-inscription .inscription-ml-line {
       margin: 0;
       font-family: var(--font-malayalam), "Noto Sans Malayalam", sans-serif;
-      font-size: 1.15rem;
+      font-size: 1rem;
       line-height: 1.9;
       text-align: justify;
       color: #000;
