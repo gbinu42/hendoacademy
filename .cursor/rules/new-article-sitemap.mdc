@@ -1,0 +1,25 @@
+---
+description: Add every new listed article URL to public/sitemap.xml
+globs: public/sitemap.xml,app/articles/**/page.tsx,lib/articles.ts
+alwaysApply: false
+---
+
+# New article sitemap
+
+When publishing a listed article, add its URL to [`public/sitemap.xml`](mdc:public/sitemap.xml).
+
+## Entry shape
+
+```xml
+   <url>
+      <loc>https://www.hendoacademy.org/articles/<slug></loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+```
+
+- Place it with the other `/articles/...` entries (near the top for newly featured work).
+- Include `<lastmod>` for new or substantially updated articles.
+- Do not add unlisted articles (`listed: false` in `lib/articles.ts`).
+- Keep extensionless paths (no `.html`).

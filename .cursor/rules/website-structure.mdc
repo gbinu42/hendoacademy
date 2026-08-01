@@ -15,7 +15,7 @@ The Hendo Academy website is a Next.js App Router site (`output: 'export'`) host
 - [`app/books/*/page.tsx`](mdc:app/books) — Book iframe pages
 
 ## Articles
-Article pages live under `app/articles/<slug>/page.tsx`. Metadata for the index is in [`lib/articles.ts`](mdc:lib/articles.ts).
+Article pages live under `app/articles/<slug>/page.tsx`. Metadata for the index is in [`lib/articles.ts`](mdc:lib/articles.ts). Listed articles must also appear in [`public/sitemap.xml`](mdc:public/sitemap.xml). See the new-article-metadata and new-article-sitemap rules.
 
 ## Styling
 - Tailwind CSS + shadcn/ui

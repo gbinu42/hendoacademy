@@ -126,6 +126,16 @@ const html = `
     <p>
       The Vaikom Kallarakkal Kadavil family is an offshoot of the Pallipuram Kallarakkal Kadavil family. Two brothers of the Kallarakkal Kadavil family, Mr. Varkey Ouseph and Mr. Varkey Chacko, migrated from Pallipuram at the end of the 19th century to the eastern side of Vembanad Lake in order to look after the vast property they had gained there.${fn(31)} With the support of other family members, the two brothers and their household built this church so that they need not cross Vembanad Lake during the monsoon to reach the church at Pallipuram. They did so at the request of their younger brother, Fr. Mathai Varkey Kadavil (Mathan Kathanar)${fn(32)}. The church was built between 1917 and 1920 and donated to the Ernakulam Diocese. It became a parish church in 1937. Fr. Mathai Varkey Kadavil, popularly known as the great Mathan Kathanar, was its first parish vicar and continued in that office until his death in 1964.
     </p>
+    <div class="article-image-pair">
+      <div class="article-image-container article-image-narrow">
+        <img src="${img}/mathan-kathanar-signature.jpg" alt="Syriac signature of Mathan Kathanar (Fr. Mathai Varkey Kadavil)" class="article-image" />
+        <div class="article-image-caption">Syriac signature of Mathan Kathanar (Fr. Mathai Varkey Kadavil)</div>
+      </div>
+      <div class="article-image-container">
+        <img src="${img}/mathan-kathanar-signature-with-seal.jpg" alt="Syriac signature of Mathan Kathanar with official seal" class="article-image" />
+        <div class="article-image-caption">Another Syriac signature of Mathan Kathanar, with seal</div>
+      </div>
+    </div>
     <p>
       What gives this church its importance in Syrian Church history is its hundred-year-old East Syriac inscription. The Syriac text stands on the front, that is, the left side of the western church wall; the Malayalam inscription appears on the front right. Although the Syriac version is a translation of the Malayalam, it differs in places and is more elaborate than the Malayalam text.
     </p>
@@ -250,7 +260,7 @@ const html = `
     <p id="fn29"><sup>29</sup> KOODAPPUZHA XAVIER, Bharatha Sabha Charithram(Mal.), OIRSI, Kottayam, 1998, P.806 <a href="#fnref29" class="fn-back">↩</a></p>
     <p id="fn30"><sup>30</sup> ISTVAN PERCZEL, Classical Syriac as a modern Lingua Franca in South India between 1600 and 2006, ARAM 21, ARAM 21.0.2047097, 2009, P.320 <a href="#fnref30" class="fn-back">↩</a></p>
     <p id="fn31"><sup>31</sup> PALLIPURAM KALLARACKAL KADAVIL KUDUMBA YOGAM, Pallipuram Kallrackal Kadavil Kudumbacharithram (Mal.), 2008, P.315 <a href="#fnref31" class="fn-back">↩</a></p>
-    <p id="fn32"><sup>32</sup> Ibid, 316 <a href="#fnref32" class="fn-back">↩</a></p>
+    <p id="fn32"><sup>32</sup> Ibid, 316. Father Mathew Kallarakkal Kadavil (Fr. Mathai Varkey Kadavil) is popularly known as the great Mathan Kathanar to distinguish him from a younger priest of the same name. He was born on 24 April 1884, ordained on 23 December 1913, and died on 8 March 1964. When he laid the foundation stone of Orshlem Church in 1917 he was only thirty-three years old and was then vicar of the Palluruthy parish church. <a href="#fnref32" class="fn-back">↩</a></p>
     <p id="fn33"><sup>33</sup> Father of Fr. Mathai who died in 1905 July 16 <a href="#fnref33" class="fn-back">↩</a></p>
     <p id="fn34"><sup>34</sup> Mar Louis Pazheparambil is the titular bishop of Tymandus, a Catholic diocese in Asia Minor which is now in Southern Turkey. <a href="#fnref34" class="fn-back">↩</a></p>
   </div>
@@ -412,6 +422,32 @@ const styles = `
     .article-content .article-image-container {
       margin: 1.5rem 0;
       text-align: center;
+    }
+
+    .article-content .article-image-pair {
+      display: grid;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+      align-items: start;
+    }
+
+    @media (min-width: 720px) {
+      .article-content .article-image-pair {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .article-content .article-image-pair .article-image-container {
+        margin: 0;
+        max-width: none;
+      }
+
+      .article-content .article-image-pair .article-image {
+        height: 320px;
+        width: 100%;
+        object-fit: contain;
+        object-position: center top;
+        background: #faf8f5;
+      }
     }
 
     .article-content .article-image-narrow {

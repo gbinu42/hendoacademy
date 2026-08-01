@@ -1,13 +1,13 @@
 ---
-description: Prefer hyphens over em dashes in all written content
+description: Use only hyphens; never em dashes or en dashes
 alwaysApply: true
 ---
 
-# Punctuation: hyphens, not em dashes
+# Punctuation: hyphen only, never em dash
 
-Always use a hyphen (`-`) for asides, appositions, and parenthetical breaks in prose.
+Use a plain hyphen (`-`) for asides, appositions, parenthetical breaks, ranges, and separators in all written content (articles, UI copy, metadata, comments).
 
-Do **not** use an em dash (`—`) or an en dash (`–`).
+Never use an em dash (`—`) or an en dash (`–`).
 
 ## Examples
 
@@ -16,9 +16,11 @@ Prefer:
 - Extending classical Karshon so modern Malayalam can be written in East Syriac script - also called Neo Malayalam Garshuni.
 - East Syriac Malankara - Unicode font with Karshon glyphs.
 - Malayalam - Suriyani Malayalam script correspondence
+- (1960-1962)
 
 Avoid:
 
 - … East Syriac script—also called …
 - … Malankara — Unicode font …
 - Malayalam – Suriyani Malayalam …
+- (1960–1962)

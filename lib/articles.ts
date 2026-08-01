@@ -30,6 +30,33 @@ export const articles: ArticleMeta[] = [
     hasComments: true,
   },
   {
+    slug: "peculiarities-of-malabar-pronunciation-of-east-syriac",
+    title: "Peculiarities of the Malabar Pronunciation of East Syriac",
+    description:
+      "Notes on how the East Syrians of Malabar pronounce Classical East Syriac, drawn from Rev. Fr. Thomas Arayathinal's Syriac Grammar - vowel length, doubling, nasal affection of beth/gamal/dalath, and related exceptions.",
+    author: "Binu George",
+    date: "August 1, 2026",
+    excerpt:
+      "Work in progress. The East Syrians of Malabar do not always follow Middle Eastern East Syriac pronunciation. These notes, based on Fr. Arayathinal's grammar, collect the main Malabar peculiarities: short vowels where others lengthen, doubling and its exceptions, and the nasal reading of duplicated ܒ ܓ ܕ.",
+    listed: true,
+    hasComments: true,
+  },
+  {
+    slug: "understanding-the-dots-in-classical-east-syriac-script",
+    title: "Understanding the Dots in Classical East Syriac Script",
+    description:
+      "A guide to East Syriac diacritics (nūqze): vowel points, qushaya and rukkakha, syāmē, and sublinear/supralinear points - how to tell them apart visually and type them correctly.",
+    author: "Binu George",
+    date: "August 1, 2026",
+    excerpt:
+      "East Syriac uses a sophisticated system of dots for pronunciation, vocalization, and grammar. This article shows how to distinguish vowel markers, consonant modifiers, and grammatical indicators - in manuscripts, print, and digital fonts - and how to type them on the Syriac Phonetic keyboard.",
+    image: "/articles/images/east-syriac-dots/feature.png",
+    imageAlt:
+      "Understanding the Dots in Classical East Syriac Script - vowel, consonant, and grammatical diacritics",
+    listed: true,
+    hasComments: true,
+  },
+  {
     slug: "neo-malayalam-karshon",
     title: "Neo Malayalam Karshon",
     description:

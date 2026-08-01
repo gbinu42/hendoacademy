@@ -1,0 +1,33 @@
+---
+description: Required metadata when creating or publishing a Hendo Academy article
+globs: app/articles/**/page.tsx,lib/articles.ts
+alwaysApply: false
+---
+
+# New article metadata
+
+When adding a listed article, complete all of the following.
+
+## 1. `lib/articles.ts`
+
+Add an `ArticleMeta` entry (near the top for new featured work):
+
+- `slug`, `title`, `description`, `author`, `date`, `excerpt`
+- `listed: true`, `hasComments: true` (unless intentionally unlisted)
+- `image` / `imageAlt` when a feature image exists
+
+## 2. `app/articles/<slug>/page.tsx` Next.js `metadata`
+
+Export full `Metadata` matching existing articles (e.g. neo-malayalam-karshon):
+
+- `title`, `description`, `keywords`, `authors`, `creator`, `publisher`, `category`
+- `openGraph`: `type: "article"`, canonical `url`, `siteName: "Hendo Academy"`, `locale: "en_IN"`, `publishedTime`, `authors`, `section`, `tags`
+- `openGraph.images` / Twitter `summary_large_image` when there is a feature image; otherwise Twitter `summary`
+- `alternates.canonical`: `https://www.hendoacademy.org/articles/<slug>`
+- `robots`: `{ index: true, follow: true }`
+
+Load listing fields via `getArticle(slug)` with a fallback object.
+
+## 3. Hyphens
+
+Use plain hyphens (`-`) only - never em or en dashes - in titles, descriptions, excerpts, and tags.
