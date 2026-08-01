@@ -12,7 +12,7 @@ const meta = getArticle(slug) ?? {
   author: "Binu George",
   date: "August 1, 2026",
   excerpt:
-    "The East Syrians of Malabar do not always follow Middle Eastern East Syriac pronunciation.",
+    "The East Syrians of Malabar do not always follow Middle Eastern East Syriac pronunciation; in some aspects the tradition is older and more authentic.",
   listed: true,
   hasComments: true,
 };
@@ -119,6 +119,13 @@ const html = `
       in the Middle East, following Rev. Fr. Thomas Arayathinal&rsquo;s
       <em>Aramaic (Syriac) Grammar</em>, Vol.&nbsp;1. Page references are to that volume.
       Each example gives Syriac, academic transliteration, Malayalam, and a short gloss.
+    </p>
+    <p>
+      In some aspects, the Malabar pronunciation appears to preserve older and more
+      authentic features of Classical East Syriac than the forms current among
+      Middle Eastern East Syrians. Where the two traditions diverge, the Malabar
+      reading often stays closer to what the written vowels and consonants imply,
+      rather than reflecting later Middle Eastern lengthening or softening.
     </p>
   </section>
 

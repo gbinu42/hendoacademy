@@ -37,7 +37,7 @@ export const articles: ArticleMeta[] = [
     author: "Binu George",
     date: "August 1, 2026",
     excerpt:
-      "Work in progress. The East Syrians of Malabar do not always follow Middle Eastern East Syriac pronunciation. These notes, based on Fr. Arayathinal's grammar, collect the main Malabar peculiarities: short vowels where others lengthen, doubling and its exceptions, and the nasal reading of duplicated ܒ ܓ ܕ.",
+      "Work in progress. The East Syrians of Malabar do not always follow Middle Eastern East Syriac pronunciation; in some aspects the tradition is older and more authentic. These notes, based on Fr. Arayathinal's grammar, collect the main Malabar peculiarities.",
     listed: true,
     hasComments: true,
   },
