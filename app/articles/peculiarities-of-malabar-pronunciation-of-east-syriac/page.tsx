@@ -258,6 +258,7 @@ const html = `
       ${pairLi("ܩܲܕܝܼܫܵܐ", "qandīšā", "കന്ദീശാ", "holy")}
       ${pairLi("ܐܲܒ݁ܝܼܕܵܐ", "ambīdā", "അമ്പീദാ", "lost")}
       ${pairLi("ܣܲܓ݁ܝܼܐܵܐ", "sangīā", "സങ്കീആ", "many")}
+      ${pairLi("ܪܲܒܝܼ", "rambī", "റമ്പി", "rabbi / my master")}
     `)}
   </section>
 
@@ -273,7 +274,7 @@ const html = `
       ${pairLi("ܩܘܼܒܵܠܵܐ", "qūbālā", "കൂബാലാ", "reception")}
       ${pairLi("ܣܘܼܬܵܪܵܐ", "sūtārā", "സൂതാറാ", "protection")}
       ${pairLi("ܟܪܘܼܒ݂ܵܐ", "krōwā", "ക്റോവാ", "cherub")}
-      ${pairLi("ܟܘܼܒܹܐ", "kūbē", "കുവേ", "thorn")}
+      ${pairLi("ܟܘܼܒܹܐ", "kūbē", "കൂവേ", "thorn")}
       ${pairLi("ܩܘܼܒܵܠܛܲܝܒ݁ܘܼܬ݂ܵܐ", "qūwālṭaybūṯā", "കൂവാൽതയ്ബൂസാ", "thanksgiving")}
     `)}
     <h3 class="article-subtitle">Exceptions (nasal or doubled)</h3>
